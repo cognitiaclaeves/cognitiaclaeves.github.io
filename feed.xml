@@ -1,178 +1,278 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <title>xt</title>
+    <description>My wanderings and ramblings in tech.
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 03 Jan 2016 03:50:39 +0000</pubDate>
-    <lastBuildDate>Sun, 03 Jan 2016 03:50:39 +0000</lastBuildDate>
+    <link>http://cognitiaclaeves.github.io/</link>
+    <atom:link href="http://cognitiaclaeves.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 03 Mar 2016 03:21:47 +0000</pubDate>
+    <lastBuildDate>Thu, 03 Mar 2016 03:21:47 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Blog Fail</title>
+        <description>&lt;p&gt;In my last post, I pretty much slammed Wordpress and mentioned that I was using a &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; container to convert simple paragraphs ( Markdown files ) into web pages. Well, when I went to update my blog with my first post, I ran into a few issues that meant that the post never actually made it onto the blog.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Since I’m here at these crossroads now, I’ll blog about the issue that prevented Jekyll from working. In a word, the issue seems to be ‘docker-machine’.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;I’m relatively new to container tech. To get Docker running on my laptop ( MacBook Air ), I first went to Docker. They had a friendly Mac install, and I soon found myself running hello-world ( through VirtualBox ). I don’t recall why, but I also found myself checking out Vagrant. Through &lt;a href=&quot;https://www.vagrantup.com&quot;&gt;Vagrant&lt;/a&gt;, I found myself running a similar container. I didn’t really see the difference between the two.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Well, one possible difference concerns the issue that I had with docker-machine when I tried to run the Jekyll container: docker doesn’t actually run on the Mac. Instead, docker-machine does this weird thing where it sets environment variables, and the docker command can then be magically accessed. At least for a while. In the case of the Jekyll container, when I was originally setting up my blog, I had set up the container with no issues, and then run it many times, with no issues. Then I had shut down the container. I had anticipated that it would just sit there, and be ready when I needed it. After all, it was a container: if it ran once successfully, since nothing persists in containers unless written to specially mounted volumes, then it should run perfectly, every time.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As I mentioned, that was not the case. I was getting errors from docker. ( I have since stopped using docker-machine on the mac, so I can’t cite what they were. )&lt;/p&gt;
+
+&lt;p&gt;I recalled that I had also seen this at work. I had been unable to find a solution on Google, and had ultimately found a post where an error that seemed fundamental enough that it really needed to be fixed, remained in an un-fixed state after some time. Months? Years? I really don’t recall. But I did know that I needed the thing I was working on to be fixed today, so I  reimplemented it using Vagrant instead:&lt;/p&gt;
+
+&lt;p&gt;I recalled finding a nice &lt;a href=&quot;https://hub.docker.com/r/phusion/baseimage/&quot;&gt;image&lt;/a&gt; in a Vagrantfile produced by a group that calls themselves &lt;a href=&quot;http://www.phusion.nl&quot;&gt;Phusion&lt;/a&gt; when I was trying to get a container going with &lt;a href=&quot;https://hub.docker.com/r/grafana/grafana/&quot;&gt;grafana&lt;/a&gt; and &lt;a href=&quot;https://hub.docker.com/r/hopsoft/graphite-statsd/&quot;&gt;graphite&lt;/a&gt;. Instead of relying on magically accessing the docker command, a VM was created by Vagrant that itself ran docker.&lt;/p&gt;
+
+&lt;p&gt;It could very well be that I’m just not running docker-machine the correct way. That maybe something happens when I shut my laptop and put it into sleep mode. Or maybe I need to shut down the terminal where I set the environment variables. However, when discussing this with my supervisor later that day, he commented that he had ditched docker-machine for Vagrant, as well. From a user-experience perspective, Vagrant just works.&lt;/p&gt;
+
+&lt;p&gt;The Jekyll container approach to blogging on github was mentioned in a docker/cloud meetup that I went to. After the meetup, he posted the link to &lt;a href=&quot;http://behemphi.github.io/github-pages/docker/2015/12/02/github-pages-with-docker.html&quot;&gt;his blog&lt;/a&gt; where he details how to set it up.&lt;/p&gt;
+
+&lt;p&gt;Because I ran into the same issues that I ran into at work with docker-machine, I intend to set a Jekyll container environment up in Vagrant, which I consider to be much more stable.&lt;/p&gt;
+
+&lt;p&gt;So the process will look like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Configure a github.io account&lt;/li&gt;
+  &lt;li&gt;Install Vagrant and VirtualBox&lt;/li&gt;
+  &lt;li&gt;Get and build the VM that runs Docker&lt;/li&gt;
+  &lt;li&gt;Within the image, build the Jekyll image&lt;/li&gt;
+  &lt;li&gt;Run the Jekyll image&lt;/li&gt;
+  &lt;li&gt;Set up a base blog&lt;/li&gt;
+  &lt;li&gt;Make a change, commit the repo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that I’ve listed the steps out, it doesn’t seem as straightforward as it did in my head. Then again, consider that what I am aiming to do is to build an environment that will convert simple paragraphs to a version-controlled ( backed up ) blog ( that can be worked on, though not updated ) without an internet connection – in effect, build a blogging platform that replaces the need for Wordpress ( for simple content ).&lt;/p&gt;
+
+&lt;p&gt;I don’t mind taking a few extra steps to get this set up, so long as the end result is that I can run it at will, when I want to, and the work is backed up.&lt;/p&gt;
+
+&lt;p&gt;Once this blog is set up, the creative process should look like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vagrant up / vagrant resume&lt;/li&gt;
+  &lt;li&gt;make local changes to markdown files&lt;/li&gt;
+  &lt;li&gt;run mangling scripts ( for the dual-theme static site )&lt;/li&gt;
+  &lt;li&gt;check local copy&lt;/li&gt;
+  &lt;li&gt;commit changes to (web) source repo&lt;/li&gt;
+  &lt;li&gt;vagrant halt / vagrant suspend&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;( all of that can be done without access to the net ), then, when the net is accessible:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;push changes to source repo&lt;/li&gt;
+  &lt;li&gt;cd into _site directory, push changes to site repo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The last step will result in updating the live site.&lt;/p&gt;
+
+&lt;p&gt;Hmm. Still seems like a long list. But I think the tradeoff will be worth it.&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 31 Dec 2015 23:38:53 +0000</pubDate>
-        <link>http://yourdomain.com/light/jekyll/update/2015/12/31/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://yourdomain.com/light/jekyll/update/2015/12/31/welcome-to-jekyll/</guid>
+        <pubDate>Sat, 16 Jan 2016 10:08:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/light/jekyll/docker/docker-machine/vagrant/github/git/blogging/opinion/2016/01/16/Blog-Fail/</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/jekyll/docker/docker-machine/vagrant/github/git/blogging/opinion/2016/01/16/Blog-Fail/</guid>
         
         
         <category>light</category>
         
         <category>jekyll</category>
         
-        <category>update</category>
+        <category>docker</category>
+        
+        <category>docker-machine</category>
+        
+        <category>vagrant</category>
+        
+        <category>github</category>
+        
+        <category>git</category>
+        
+        <category>blogging</category>
+        
+        <category>opinion</category>
         
       </item>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Blog Fail</title>
+        <description>&lt;p&gt;In my last post, I pretty much slammed Wordpress and mentioned that I was using a &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; container to convert simple paragraphs ( Markdown files ) into web pages. Well, when I went to update my blog with my first post, I ran into a few issues that meant that the post never actually made it onto the blog.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Since I’m here at these crossroads now, I’ll blog about the issue that prevented Jekyll from working. In a word, the issue seems to be ‘docker-machine’.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;I’m relatively new to container tech. To get Docker running on my laptop ( MacBook Air ), I first went to Docker. They had a friendly Mac install, and I soon found myself running hello-world ( through VirtualBox ). I don’t recall why, but I also found myself checking out Vagrant. Through &lt;a href=&quot;https://www.vagrantup.com&quot;&gt;Vagrant&lt;/a&gt;, I found myself running a similar container. I didn’t really see the difference between the two.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Well, one possible difference concerns the issue that I had with docker-machine when I tried to run the Jekyll container: docker doesn’t actually run on the Mac. Instead, docker-machine does this weird thing where it sets environment variables, and the docker command can then be magically accessed. At least for a while. In the case of the Jekyll container, when I was originally setting up my blog, I had set up the container with no issues, and then run it many times, with no issues. Then I had shut down the container. I had anticipated that it would just sit there, and be ready when I needed it. After all, it was a container: if it ran once successfully, since nothing persists in containers unless written to specially mounted volumes, then it should run perfectly, every time.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As I mentioned, that was not the case. I was getting errors from docker. ( I have since stopped using docker-machine on the mac, so I can’t cite what they were. )&lt;/p&gt;
+
+&lt;p&gt;I recalled that I had also seen this at work. I had been unable to find a solution on Google, and had ultimately found a post where an error that seemed fundamental enough that it really needed to be fixed, remained in an un-fixed state after some time. Months? Years? I really don’t recall. But I did know that I needed the thing I was working on to be fixed today, so I  reimplemented it using Vagrant instead:&lt;/p&gt;
+
+&lt;p&gt;I recalled finding a nice &lt;a href=&quot;https://hub.docker.com/r/phusion/baseimage/&quot;&gt;image&lt;/a&gt; in a Vagrantfile produced by a group that calls themselves &lt;a href=&quot;http://www.phusion.nl&quot;&gt;Phusion&lt;/a&gt; when I was trying to get a container going with &lt;a href=&quot;https://hub.docker.com/r/grafana/grafana/&quot;&gt;grafana&lt;/a&gt; and &lt;a href=&quot;https://hub.docker.com/r/hopsoft/graphite-statsd/&quot;&gt;graphite&lt;/a&gt;. Instead of relying on magically accessing the docker command, a VM was created by Vagrant that itself ran docker.&lt;/p&gt;
+
+&lt;p&gt;It could very well be that I’m just not running docker-machine the correct way. That maybe something happens when I shut my laptop and put it into sleep mode. Or maybe I need to shut down the terminal where I set the environment variables. However, when discussing this with my supervisor later that day, he commented that he had ditched docker-machine for Vagrant, as well. From a user-experience perspective, Vagrant just works.&lt;/p&gt;
+
+&lt;p&gt;The Jekyll container approach to blogging on github was mentioned in a docker/cloud meetup that I went to. After the meetup, he posted the link to &lt;a href=&quot;http://behemphi.github.io/github-pages/docker/2015/12/02/github-pages-with-docker.html&quot;&gt;his blog&lt;/a&gt; where he details how to set it up.&lt;/p&gt;
+
+&lt;p&gt;Because I ran into the same issues that I ran into at work with docker-machine, I intend to set a Jekyll container environment up in Vagrant, which I consider to be much more stable.&lt;/p&gt;
+
+&lt;p&gt;So the process will look like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Configure a github.io account&lt;/li&gt;
+  &lt;li&gt;Install Vagrant and VirtualBox&lt;/li&gt;
+  &lt;li&gt;Get and build the VM that runs Docker&lt;/li&gt;
+  &lt;li&gt;Within the image, build the Jekyll image&lt;/li&gt;
+  &lt;li&gt;Run the Jekyll image&lt;/li&gt;
+  &lt;li&gt;Set up a base blog&lt;/li&gt;
+  &lt;li&gt;Make a change, commit the repo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that I’ve listed the steps out, it doesn’t seem as straightforward as it did in my head. Then again, consider that what I am aiming to do is to build an environment that will convert simple paragraphs to a version-controlled ( backed up ) blog ( that can be worked on, though not updated ) without an internet connection – in effect, build a blogging platform that replaces the need for Wordpress ( for simple content ).&lt;/p&gt;
+
+&lt;p&gt;I don’t mind taking a few extra steps to get this set up, so long as the end result is that I can run it at will, when I want to, and the work is backed up.&lt;/p&gt;
+
+&lt;p&gt;Once this blog is set up, the creative process should look like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vagrant up / vagrant resume&lt;/li&gt;
+  &lt;li&gt;make local changes to markdown files&lt;/li&gt;
+  &lt;li&gt;run mangling scripts ( for the dual-theme static site )&lt;/li&gt;
+  &lt;li&gt;check local copy&lt;/li&gt;
+  &lt;li&gt;commit changes to (web) source repo&lt;/li&gt;
+  &lt;li&gt;vagrant halt / vagrant suspend&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;( all of that can be done without access to the net ), then, when the net is accessible:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;push changes to source repo&lt;/li&gt;
+  &lt;li&gt;cd into _site directory, push changes to site repo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The last step will result in updating the live site.&lt;/p&gt;
+
+&lt;p&gt;Hmm. Still seems like a long list. But I think the tradeoff will be worth it.&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 31 Dec 2015 23:38:53 +0000</pubDate>
-        <link>http://yourdomain.com/dark/jekyll/update/2015/12/31/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://yourdomain.com/dark/jekyll/update/2015/12/31/welcome-to-jekyll/</guid>
+        <pubDate>Sat, 16 Jan 2016 10:08:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/dark/jekyll/docker/docker-machine/vagrant/github/git/blogging/opinion/2016/01/16/Blog-Fail/</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/dark/jekyll/docker/docker-machine/vagrant/github/git/blogging/opinion/2016/01/16/Blog-Fail/</guid>
         
         
         <category>dark</category>
         
         <category>jekyll</category>
         
-        <category>update</category>
+        <category>docker</category>
+        
+        <category>docker-machine</category>
+        
+        <category>vagrant</category>
+        
+        <category>github</category>
+        
+        <category>git</category>
+        
+        <category>blogging</category>
+        
+        <category>opinion</category>
         
       </item>
     
       <item>
-        <title>France Removes Internet Cut-Off Threat From its Anti-Piracy Law</title>
-        <description>
+        <title>New Blog, First Post</title>
+        <description>&lt;p&gt;About a year ago, I tried to start another blog. I have had this nasty habit of trying to start blogs, and then just not keeping up with them. This time was going to be different. Until I started it with Wordpress. I honestly don’t know why anyone has time for that platform. On my first entry, I ran into the issue of Wordpress ignoring my desired line-spacing, and willfully inserting its own. What? I can’t control the output? I have to just settle for whatever Wordpress thinks is sufficient? That’s not my usual relationship with software. I prefer to do the deciding, and for the software to comply. Consistently.&lt;/p&gt;
+
+&lt;p&gt;The next gotcha that I ran into was when one of my posts just mysteriously disappeared while writing it. I looked into using plugins to back it up, and then determined that the words that I anticipated spending my time writing … were hidden away in a database somewhere. Worse, it looked like it was going to be a thing to restore a site.&lt;/p&gt;
+
+&lt;p&gt;I don’t have time for such things. I live in a word where I allocate most of my time trying to figure out how to get computers to do things. For a while, that was all that I had time to do. Because depression. … It was a balancing act: how to do the work that I need to do to complete my work goals with the time that I’m not under a cloud of darkness?&lt;/p&gt;
+
+&lt;p&gt;Today, depression hits me differently. Mostly, I remain standing. The darkness is not nearly as dense. The last few times, I found myself saying that I felt like I could not track my thoughts, but it hadn’t registered as depression to me because there wasn’t a feeling of hopelessness. For now, I’m guessing that this is what depression feels like when the biological process happens and doesn’t trigger a mood drop. I’m guessing this because I’m taking preventative measures against mood drops, like exercising, and observing and curating my thoughts.&lt;/p&gt;
+
+&lt;p&gt;My process has led me to intentionally structure my time for more space away from work. I use this time to come closer to achieving that work-life balance that the company was always talking about.&lt;/p&gt;
+
+&lt;p&gt;So today, I have time for myself. I consider it mandatory to invest some of that time into exercise. I also choose to spend time with loved ones. And quality of life management.&lt;/p&gt;
+
+&lt;p&gt;Quality of life management is a new category for me. So much so, that I’m not really sure what I should call it. For the past two years, I have lived in a room that seems too small for me. It may actually be too small. But I’ve never been able to keep things put away long enough to make that determination. Because there isn’t much space. And depression. … When a wave hit, it used to wash out everything under my feet.&lt;/p&gt;
+
+&lt;p&gt;Structuring my work to leave more time for myself was a bold move for me. Accepting that I needed more time than I was getting in order to manage my life was not an easy thing for me to do. At first, I tried a career change.&lt;/p&gt;
+
+&lt;p&gt;This was, in itself, huge for me. I went from the software / system administration field to becoming an LMT. While working in a brand new field to me, the difference between being in a field where I truly knew very little, and being in a field that was difficult for a human being to do with his brain, became more evident to me. I had been telling myself that I just wasn’t any good at what I had been doing. But something about working in a new field with very knowledge helped to better frame the evidence I had that I was actually quite skilled in the field that I had left.&lt;/p&gt;
+
+&lt;p&gt;I’m off topic. Here’s the short version: I got a new job at the same company doing exactly what I wanted ( instead of what I had been doing ), paying twice as much, with more time off for myself.&lt;/p&gt;
+
+&lt;p&gt;With that, I’m back to the present, where I sit typing on 750words.com ( because it seemed interesting to do it that way ), in anticipation of loading this blog post into a new site that doesn’t run Wordpress, but instead, takes advantage of the distributed repository, github, and runs Jekyll in a container to generate these words, literally from plain text paragraphs into what you see right now.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Backup? Check.&lt;/li&gt;
+  &lt;li&gt;Formatting? Check.&lt;/li&gt;
+  &lt;li&gt;Efficiency? Check.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In a future post, I’ll address more about Jekyll, and how not having prefabricated css influenced my design decisions.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 05 Jun 2013 20:33:11 +0000</pubDate>
-        <link>http://yourdomain.com/dark/2013/06/05/france-removes-internet-cut-off/</link>
-        <guid isPermaLink="true">http://yourdomain.com/dark/2013/06/05/france-removes-internet-cut-off/</guid>
-        
-        
-        <category>dark</category>
-        
-      </item>
-    
-      <item>
-        <title>France Removes Internet Cut-Off Threat From its Anti-Piracy Law</title>
-        <description>
-</description>
-        <pubDate>Wed, 05 Jun 2013 20:33:11 +0000</pubDate>
-        <link>http://yourdomain.com/light/2013/06/05/france-removes-internet-cut-off/</link>
-        <guid isPermaLink="true">http://yourdomain.com/light/2013/06/05/france-removes-internet-cut-off/</guid>
+        <pubDate>Fri, 15 Jan 2016 17:42:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/light/jekyll/wordpress/depression/2016/01/15/New-blog-first-post/</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/jekyll/wordpress/depression/2016/01/15/New-blog-first-post/</guid>
         
         
         <category>light</category>
         
-      </item>
-    
-      <item>
-        <title>Jekyll Documentation</title>
-        <description>
-</description>
-        <pubDate>Wed, 05 Jun 2013 20:03:11 +0000</pubDate>
-        <link>http://yourdomain.com/2013/06/05/jekyll-documentation/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2013/06/05/jekyll-documentation/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Jekyll Documentation</title>
-        <description>
-</description>
-        <pubDate>Wed, 05 Jun 2013 20:03:11 +0000</pubDate>
-        <link>http://yourdomain.com/2013/06/05/jekyll-documentation/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2013/06/05/jekyll-documentation/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
-To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 05 Jun 2013 17:06:25 +0000</pubDate>
-        <link>http://yourdomain.com/light/jekyll/update/2013/06/05/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://yourdomain.com/light/jekyll/update/2013/06/05/welcome-to-jekyll/</guid>
-        
-        
-        <category>light</category>
-        
         <category>jekyll</category>
         
-        <category>update</category>
+        <category>wordpress</category>
+        
+        <category>depression</category>
         
       </item>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
-To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+        <title>New Blog, First Post</title>
+        <description>&lt;p&gt;About a year ago, I tried to start another blog. I have had this nasty habit of trying to start blogs, and then just not keeping up with them. This time was going to be different. Until I started it with Wordpress. I honestly don’t know why anyone has time for that platform. On my first entry, I ran into the issue of Wordpress ignoring my desired line-spacing, and willfully inserting its own. What? I can’t control the output? I have to just settle for whatever Wordpress thinks is sufficient? That’s not my usual relationship with software. I prefer to do the deciding, and for the software to comply. Consistently.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;The next gotcha that I ran into was when one of my posts just mysteriously disappeared while writing it. I looked into using plugins to back it up, and then determined that the words that I anticipated spending my time writing … were hidden away in a database somewhere. Worse, it looked like it was going to be a thing to restore a site.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I don’t have time for such things. I live in a word where I allocate most of my time trying to figure out how to get computers to do things. For a while, that was all that I had time to do. Because depression. … It was a balancing act: how to do the work that I need to do to complete my work goals with the time that I’m not under a cloud of darkness?&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Today, depression hits me differently. Mostly, I remain standing. The darkness is not nearly as dense. The last few times, I found myself saying that I felt like I could not track my thoughts, but it hadn’t registered as depression to me because there wasn’t a feeling of hopelessness. For now, I’m guessing that this is what depression feels like when the biological process happens and doesn’t trigger a mood drop. I’m guessing this because I’m taking preventative measures against mood drops, like exercising, and observing and curating my thoughts.&lt;/p&gt;
 
+&lt;p&gt;My process has led me to intentionally structure my time for more space away from work. I use this time to come closer to achieving that work-life balance that the company was always talking about.&lt;/p&gt;
+
+&lt;p&gt;So today, I have time for myself. I consider it mandatory to invest some of that time into exercise. I also choose to spend time with loved ones. And quality of life management.&lt;/p&gt;
+
+&lt;p&gt;Quality of life management is a new category for me. So much so, that I’m not really sure what I should call it. For the past two years, I have lived in a room that seems too small for me. It may actually be too small. But I’ve never been able to keep things put away long enough to make that determination. Because there isn’t much space. And depression. … When a wave hit, it used to wash out everything under my feet.&lt;/p&gt;
+
+&lt;p&gt;Structuring my work to leave more time for myself was a bold move for me. Accepting that I needed more time than I was getting in order to manage my life was not an easy thing for me to do. At first, I tried a career change.&lt;/p&gt;
+
+&lt;p&gt;This was, in itself, huge for me. I went from the software / system administration field to becoming an LMT. While working in a brand new field to me, the difference between being in a field where I truly knew very little, and being in a field that was difficult for a human being to do with his brain, became more evident to me. I had been telling myself that I just wasn’t any good at what I had been doing. But something about working in a new field with very knowledge helped to better frame the evidence I had that I was actually quite skilled in the field that I had left.&lt;/p&gt;
+
+&lt;p&gt;I’m off topic. Here’s the short version: I got a new job at the same company doing exactly what I wanted ( instead of what I had been doing ), paying twice as much, with more time off for myself.&lt;/p&gt;
+
+&lt;p&gt;With that, I’m back to the present, where I sit typing on 750words.com ( because it seemed interesting to do it that way ), in anticipation of loading this blog post into a new site that doesn’t run Wordpress, but instead, takes advantage of the distributed repository, github, and runs Jekyll in a container to generate these words, literally from plain text paragraphs into what you see right now.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Backup? Check.&lt;/li&gt;
+  &lt;li&gt;Formatting? Check.&lt;/li&gt;
+  &lt;li&gt;Efficiency? Check.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In a future post, I’ll address more about Jekyll, and how not having prefabricated css influenced my design decisions.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 05 Jun 2013 17:06:25 +0000</pubDate>
-        <link>http://yourdomain.com/dark/jekyll/update/2013/06/05/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://yourdomain.com/dark/jekyll/update/2013/06/05/welcome-to-jekyll/</guid>
+        <pubDate>Fri, 15 Jan 2016 17:42:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/dark/jekyll/wordpress/depression/2016/01/15/New-blog-first-post/</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/dark/jekyll/wordpress/depression/2016/01/15/New-blog-first-post/</guid>
         
         
         <category>dark</category>
         
         <category>jekyll</category>
         
-        <category>update</category>
+        <category>wordpress</category>
+        
+        <category>depression</category>
         
       </item>
     
