@@ -6,9 +6,61 @@
 </description>
     <link>http://cognitiaclaeves.github.io/</link>
     <atom:link href="http://cognitiaclaeves.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 03 Mar 2016 12:51:21 +0000</pubDate>
-    <lastBuildDate>Thu, 03 Mar 2016 12:51:21 +0000</lastBuildDate>
+    <pubDate>Thu, 03 Mar 2016 13:22:51 +0000</pubDate>
+    <lastBuildDate>Thu, 03 Mar 2016 13:22:51 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Holy Atomic Operating Systems, Batman!</title>
+        <description>&lt;p&gt;This one is going to be short. My company has a weekly ‘Docker Roundup’ that the ‘Misfits of Docker’ participate in. We use an hour each week to explore what all of us are working on that’s related to containers and container orchestration.&lt;/p&gt;
+
+&lt;p&gt;Additionally, we’ve recently started having a ‘theme’ for the meeting, a task to accomplish related to containers or container orchestration.&lt;/p&gt;
+
+&lt;p&gt;For the last one, I requested that we cover Atomic Hosts. We followed &lt;a href=&quot;http://www.projectatomic.io/docs/gettingstarted/&quot;&gt;this guide&lt;/a&gt; – I should point out that we followed the directions almost exactly, even though some strings had changed, with the exception of the 192.* IP addresses.  We replicated the steps on an AWS cluster.&lt;/p&gt;
+
+&lt;p&gt;It was a bit odd to instantiate a pod directly in kubernetes ( rather than a replication controller ), so we moved onto another guide that included an expose command, and that’s about where our success ended: Amazon and Kubernetes don’t know each other well enough for Amazon to respond to the expose command.&lt;/p&gt;
+
+&lt;p&gt;Other than that, though, the experience went pretty well: We were able to get a modern kubernetes cluster working that could create a single pod ( or replicated pods ) in under an hour. This was, by far, the fastest way to get a kubernetes cluster working on the cloud. Everything else that we’ve tried - CentOS guides and coreOS guides - have resulted in more work than an hour’s worth. Recently I found one in Kubernetes/Contrib that uses Vagrant to set up the entire cluster, but doesn’t work – at least not without OpenStack.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Mar 2016 07:01:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/light/docker/atomichost/2016/03/03/Holy-Atomic-Operating-Systems-Batman/</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/docker/atomichost/2016/03/03/Holy-Atomic-Operating-Systems-Batman/</guid>
+        
+        
+        <category>light</category>
+        
+        <category>docker</category>
+        
+        <category>atomichost</category>
+        
+      </item>
+    
+      <item>
+        <title>Holy Atomic Operating Systems, Batman!</title>
+        <description>&lt;p&gt;This one is going to be short. My company has a weekly ‘Docker Roundup’ that the ‘Misfits of Docker’ participate in. We use an hour each week to explore what all of us are working on that’s related to containers and container orchestration.&lt;/p&gt;
+
+&lt;p&gt;Additionally, we’ve recently started having a ‘theme’ for the meeting, a task to accomplish related to containers or container orchestration.&lt;/p&gt;
+
+&lt;p&gt;For the last one, I requested that we cover Atomic Hosts. We followed &lt;a href=&quot;http://www.projectatomic.io/docs/gettingstarted/&quot;&gt;this guide&lt;/a&gt; – I should point out that we followed the directions almost exactly, even though some strings had changed, with the exception of the 192.* IP addresses.  We replicated the steps on an AWS cluster.&lt;/p&gt;
+
+&lt;p&gt;It was a bit odd to instantiate a pod directly in kubernetes ( rather than a replication controller ), so we moved onto another guide that included an expose command, and that’s about where our success ended: Amazon and Kubernetes don’t know each other well enough for Amazon to respond to the expose command.&lt;/p&gt;
+
+&lt;p&gt;Other than that, though, the experience went pretty well: We were able to get a modern kubernetes cluster working that could create a single pod ( or replicated pods ) in under an hour. This was, by far, the fastest way to get a kubernetes cluster working on the cloud. Everything else that we’ve tried - CentOS guides and coreOS guides - have resulted in more work than an hour’s worth. Recently I found one in Kubernetes/Contrib that uses Vagrant to set up the entire cluster, but doesn’t work – at least not without OpenStack.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Mar 2016 07:01:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/dark/docker/atomichost/2016/03/03/Holy-Atomic-Operating-Systems-Batman/</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/dark/docker/atomichost/2016/03/03/Holy-Atomic-Operating-Systems-Batman/</guid>
+        
+        
+        <category>dark</category>
+        
+        <category>docker</category>
+        
+        <category>atomichost</category>
+        
+      </item>
     
       <item>
         <title>Blog Fail</title>
@@ -70,6 +122,13 @@
 
 &lt;p&gt;Hmm. Still seems like a long list. But I think the tradeoff will be worth it.&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;p&gt;Update ( March 3, 2016 ) :&lt;/p&gt;
+
+&lt;p&gt;I’m now blogging with a Mac through a Vagrant-Docker-Jekyll combo. No mysterious “can’t access the VM / container issues”, though there was an odd caching issue with icons that I solved by removing all the icons and then restarting the vagrant box.&lt;/p&gt;
+
+&lt;p&gt;I’ll include all the steps I took to get this monster working soon!&lt;/p&gt;
 </description>
         <pubDate>Sat, 16 Jan 2016 10:08:00 +0000</pubDate>
         <link>http://cognitiaclaeves.github.io/light/jekyll/docker/docker-machine/vagrant/github/git/blogging/opinion/2016/01/16/Blog-Fail/</link>
@@ -156,6 +215,13 @@
 
 &lt;p&gt;Hmm. Still seems like a long list. But I think the tradeoff will be worth it.&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;p&gt;Update ( March 3, 2016 ) :&lt;/p&gt;
+
+&lt;p&gt;I’m now blogging with a Mac through a Vagrant-Docker-Jekyll combo. No mysterious “can’t access the VM / container issues”, though there was an odd caching issue with icons that I solved by removing all the icons and then restarting the vagrant box.&lt;/p&gt;
+
+&lt;p&gt;I’ll include all the steps I took to get this monster working soon!&lt;/p&gt;
 </description>
         <pubDate>Sat, 16 Jan 2016 10:08:00 +0000</pubDate>
         <link>http://cognitiaclaeves.github.io/dark/jekyll/docker/docker-machine/vagrant/github/git/blogging/opinion/2016/01/16/Blog-Fail/</link>
