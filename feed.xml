@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>xt</title>
-    <description>Containers ( Docker ), Orchestration ( Kubernetes ), DevOps (.*) -- Oh My!   And other wanderings and ramblings.
+    <description>Linux, Containers ( Docker ), Orchestration ( Kubernetes ), DevOps (.*) -- Oh My!   And other wanderings and ramblings.
 </description>
     <link>http://cognitiaclaeves.github.io/</link>
     <atom:link href="http://cognitiaclaeves.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 03 Mar 2016 12:13:10 +0000</pubDate>
-    <lastBuildDate>Thu, 03 Mar 2016 12:13:10 +0000</lastBuildDate>
+    <pubDate>Thu, 03 Mar 2016 12:44:22 +0000</pubDate>
+    <lastBuildDate>Thu, 03 Mar 2016 12:44:22 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
