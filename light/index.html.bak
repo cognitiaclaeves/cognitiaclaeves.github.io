@@ -11,7 +11,7 @@
   <![endif]-->
 
   <link href="/assets/css/style.css" rel="stylesheet" />
-  <link href="/assets/css/colors-dark.css" rel="stylesheet" />
+  <link href="/assets/css/colors-light.css" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico?">
   <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
@@ -39,9 +39,9 @@
     <div id="sidebar">
       <nav>
         <ul>
-          <li><a href="/dark/">Home</a></li>
-          <li><a href="/archives/dark">Archive</a></li>
-          <li><a href="/dark/about">About</a></li>
+          <li><a href="/light/">Home</a></li>
+          <li><a href="/archives/light">Archive</a></li>
+          <li><a href="/light/about">About</a></li>
 	  <li><a href="http://twitter.com/cognitiaclaeves">Twitter</a></li>
           <li><a href="/feed.xml">RSS Feed</a></li>
         </ul>
@@ -57,7 +57,7 @@
 	<article class="post">
 
 		
-			<h1><a href="/dark/2016/03/03/Blogging-with-Vagrant-Docker-Jekyll-Github-Part2/">Blogging with VDJG: Part 2 - Git & Github</a></h1>
+			<h1><a href="/light/2016/03/03/Blogging-with-Vagrant-Docker-Jekyll-Github-Part2/">Blogging with VDJG: Part 2 - Git & Github</a></h1>
 		
 
 		
@@ -66,23 +66,23 @@
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/vagrant">vagrant</a>
+	      <a class="tag_list_link" href="/tags/light/vagrant">vagrant</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/docker">docker</a>
+	      <a class="tag_list_link" href="/tags/light/docker">docker</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/github">github</a>
+	      <a class="tag_list_link" href="/tags/light/github">github</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/jekyll">jekyll</a>
+	      <a class="tag_list_link" href="/tags/light/jekyll">jekyll</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/blogging">blogging</a>
+	      <a class="tag_list_link" href="/tags/light/blogging">blogging</a>
 	    </li>
 	  
 	</ul>
@@ -301,7 +301,7 @@ personal/phusion-jekyll/baseimage-docker on master <span class="o">[</span>!?<sp
 	<article class="post">
 
 		
-			<h1><a href="/dark/2016/03/03/Blogging-with-Vagrant-Docker-Jekyll-Github/">Blogging with VDJG: Part 1 - Vagrant, Docker & Jekyll</a></h1>
+			<h1><a href="/light/2016/03/03/Blogging-with-Vagrant-Docker-Jekyll-Github/">Blogging with VDJG: Part 1 - Vagrant, Docker & Jekyll</a></h1>
 		
 
 		
@@ -310,23 +310,23 @@ personal/phusion-jekyll/baseimage-docker on master <span class="o">[</span>!?<sp
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/vagrant">vagrant</a>
+	      <a class="tag_list_link" href="/tags/light/vagrant">vagrant</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/docker">docker</a>
+	      <a class="tag_list_link" href="/tags/light/docker">docker</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/github">github</a>
+	      <a class="tag_list_link" href="/tags/light/github">github</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/jekyll">jekyll</a>
+	      <a class="tag_list_link" href="/tags/light/jekyll">jekyll</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/blogging">blogging</a>
+	      <a class="tag_list_link" href="/tags/light/blogging">blogging</a>
 	    </li>
 	  
 	</ul>
@@ -523,7 +523,7 @@ personal/phusion-jekyll/baseimage-docker on master <span class="o">[</span>!?<sp
 	<article class="post">
 
 		
-			<h1><a href="/dark/2016/03/03/Holy-Atomic-Operating-Systems-Batman/">Holy Atomic Operating Systems, Batman!</a></h1>
+			<h1><a href="/light/2016/03/03/Holy-Atomic-Operating-Systems-Batman/">Holy Atomic Operating Systems, Batman!</a></h1>
 		
 
 		
@@ -532,15 +532,15 @@ personal/phusion-jekyll/baseimage-docker on master <span class="o">[</span>!?<sp
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/docker">docker</a>
+	      <a class="tag_list_link" href="/tags/light/docker">docker</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/atomichost">atomichost</a>
+	      <a class="tag_list_link" href="/tags/light/atomichost">atomichost</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/kubernetes">kubernetes</a>
+	      <a class="tag_list_link" href="/tags/light/kubernetes">kubernetes</a>
 	    </li>
 	  
 	</ul>
@@ -567,7 +567,7 @@ personal/phusion-jekyll/baseimage-docker on master <span class="o">[</span>!?<sp
 	<article class="post">
 
 		
-			<h1><a href="/dark/2016/01/16/Blog-Fail/">Blog Fail</a></h1>
+			<h1><a href="/light/2016/01/16/Blog-Fail/">Blog Fail</a></h1>
 		
 
 		
@@ -576,35 +576,35 @@ personal/phusion-jekyll/baseimage-docker on master <span class="o">[</span>!?<sp
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/jekyll">jekyll</a>
+	      <a class="tag_list_link" href="/tags/light/jekyll">jekyll</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/docker">docker</a>
+	      <a class="tag_list_link" href="/tags/light/docker">docker</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/docker-machine">docker-machine</a>
+	      <a class="tag_list_link" href="/tags/light/docker-machine">docker-machine</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/vagrant">vagrant</a>
+	      <a class="tag_list_link" href="/tags/light/vagrant">vagrant</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/github">github</a>
+	      <a class="tag_list_link" href="/tags/light/github">github</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/git">git</a>
+	      <a class="tag_list_link" href="/tags/light/git">git</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/blogging">blogging</a>
+	      <a class="tag_list_link" href="/tags/light/blogging">blogging</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/opinion">opinion</a>
+	      <a class="tag_list_link" href="/tags/light/opinion">opinion</a>
 	    </li>
 	  
 	</ul>
@@ -688,7 +688,7 @@ personal/phusion-jekyll/baseimage-docker on master <span class="o">[</span>!?<sp
 	<article class="post">
 
 		
-			<h1><a href="/dark/2016/01/15/New-blog-first-post/">New Blog, First Post</a></h1>
+			<h1><a href="/light/2016/01/15/New-blog-first-post/">New Blog, First Post</a></h1>
 		
 
 		
@@ -697,15 +697,15 @@ personal/phusion-jekyll/baseimage-docker on master <span class="o">[</span>!?<sp
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/jekyll">jekyll</a>
+	      <a class="tag_list_link" href="/tags/light/jekyll">jekyll</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/wordpress">wordpress</a>
+	      <a class="tag_list_link" href="/tags/light/wordpress">wordpress</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/depression">depression</a>
+	      <a class="tag_list_link" href="/tags/light/depression">depression</a>
 	    </li>
 	  
 	</ul>
