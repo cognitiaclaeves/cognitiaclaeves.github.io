@@ -212,7 +212,6 @@ img.center {
 div.post_meta_wrapper {
   border: 1px solid #C9C6C3;
   border-width: 1px 0;
-  'color: #666;
   font-size: 14px;
   line-height: 2;
   margin: 0 0 20px;
@@ -222,7 +221,6 @@ div.post_meta_wrapper {
 
 .post_meta_wrapper time {
   border-right: 1px solid #bbb;
-  'color: 666;
   float: left;
   font-size: 14px;
   padding-top: 2px;
@@ -267,7 +265,6 @@ div.post_meta_wrapper {
 
 
 div.tag_meta_wrapper {
-  'color: #666;
   font-size: 14px;
   line-height: 2;
   margin: 0 0 20px;
@@ -278,7 +275,6 @@ div.tag_meta_wrapper {
 
 .tag_meta_wrapper time {
   border-right: 1px solid #bbb;
-  'color: 666;
   float: left;
   font-size: 14px;
   padding-top: 2px;
@@ -339,7 +335,6 @@ li.tag_meta_list_item {
 div.archive_meta_wrapper {
   border: 1px solid #C9C6C3;
   border-width: 1px 0;
-  'color: #666;
   font-size: 14px;
   line-height: 2;
   margin: 0 0 20px;
@@ -349,7 +344,6 @@ div.archive_meta_wrapper {
 
 .archive_meta_wrapper time {
   border-right: 1px solid #bbb;
-  'color: 666;
   float: left;
   font-size: 14px;
   padding-top: 2px;
@@ -464,4 +458,9 @@ div.archive_meta_wrapper {
   line-height: 1.7;
 }
  
-.icon-sun:before { cont
+.icon-sun:before { content: '\e801'; }
+.icon-anchor:before { content: '\e800'; }
+.icon-anchor {
+	font-size: 65%;
+}
+
