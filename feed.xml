@@ -6,8 +6,8 @@
 </description>
     <link>http://cognitiaclaeves.github.io/</link>
     <atom:link href="http://cognitiaclaeves.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 09 Mar 2016 05:09:53 +0000</pubDate>
-    <lastBuildDate>Wed, 09 Mar 2016 05:09:53 +0000</lastBuildDate>
+    <pubDate>Wed, 09 Mar 2016 22:25:54 +0000</pubDate>
+    <lastBuildDate>Wed, 09 Mar 2016 22:25:54 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -18,8 +18,9 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/phusion/baseimage-docker.git
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;baseimage-docker
+mkdir data
 curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/Vagrantfile &amp;gt; Vagrantfile
-curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/raw/develop/source-files/exec-jekyll.sh &amp;gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/exec-jekyll.sh &amp;gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
 chmod +x &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
 vagrant up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -51,8 +52,9 @@ vagrant up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/phusion/baseimage-docker.git
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;baseimage-docker
+mkdir data
 curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/Vagrantfile &amp;gt; Vagrantfile
-curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/raw/develop/source-files/exec-jekyll.sh &amp;gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/exec-jekyll.sh &amp;gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
 chmod +x &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
 vagrant up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
