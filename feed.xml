@@ -6,9 +6,75 @@
 </description>
     <link>http://cognitiaclaeves.github.io/</link>
     <atom:link href="http://cognitiaclaeves.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 07 Mar 2016 05:55:25 +0000</pubDate>
-    <lastBuildDate>Mon, 07 Mar 2016 05:55:25 +0000</lastBuildDate>
+    <pubDate>Wed, 09 Mar 2016 05:09:53 +0000</pubDate>
+    <lastBuildDate>Wed, 09 Mar 2016 05:09:53 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Blogging with VDJG: Part 1.5 - Vagrant, Docker &amp; Jekyll - Shortcut!</title>
+        <description>&lt;p&gt;I just finished going through all of the steps of how I created the vagrant-docker-jekyll combo that I use to blog with.&lt;/p&gt;
+
+&lt;p&gt;… And then I realized … the whole point of vagrant and docker is to be able to create an environment that can be replicated … so it should theoretically be possible for me to set up the entire environment and provide a few short lines to get the whole thing working, right?  Right.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/phusion/baseimage-docker.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;baseimage-docker
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/Vagrantfile &amp;gt; Vagrantfile
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/raw/develop/source-files/exec-jekyll.sh &amp;gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
+chmod +x &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
+vagrant up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 08 Mar 2016 23:00:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/light/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut/</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut/</guid>
+        
+        <category>vagrant</category>
+        
+        <category>docker</category>
+        
+        <category>github</category>
+        
+        <category>jekyll</category>
+        
+        <category>blogging</category>
+        
+        
+        <category>light</category>
+        
+      </item>
+    
+      <item>
+        <title>Blogging with VDJG: Part 1.5 - Vagrant, Docker &amp; Jekyll - Shortcut!</title>
+        <description>&lt;p&gt;I just finished going through all of the steps of how I created the vagrant-docker-jekyll combo that I use to blog with.&lt;/p&gt;
+
+&lt;p&gt;… And then I realized … the whole point of vagrant and docker is to be able to create an environment that can be replicated … so it should theoretically be possible for me to set up the entire environment and provide a few short lines to get the whole thing working, right?  Right.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/phusion/baseimage-docker.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;baseimage-docker
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/Vagrantfile &amp;gt; Vagrantfile
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/raw/develop/source-files/exec-jekyll.sh &amp;gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
+chmod +x &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;-jekyll.sh
+vagrant up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 08 Mar 2016 23:00:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/dark/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut/</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/dark/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut/</guid>
+        
+        <category>vagrant</category>
+        
+        <category>docker</category>
+        
+        <category>github</category>
+        
+        <category>jekyll</category>
+        
+        <category>blogging</category>
+        
+        
+        <category>dark</category>
+        
+      </item>
     
       <item>
         <title>Blogging with VDJG: Part 1 - Vagrant, Docker &amp; Jekyll</title>
@@ -17,6 +83,8 @@
 &lt;p&gt;&lt;em&gt;I set up this process after trying out a blogging process that was demonstrated by Boyd at a devops / docker / cloud meetup, which he later published on &lt;a href=&quot;http://behemphi.github.io/github-pages/docker/2015/12/02/github-pages-with-docker.html&quot;&gt;his blog&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Blogging with VDJG covers the process that I set up to make this happen. In the first part, I cover everything short of publishing it live. In the second part, I cover publishing it live, and in the third part, I cover what it looks like when I create a new blog entry.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I like to show all my work.  But if you just want to get a blog up in a hurry with this method, I made a short cut!&lt;/p&gt;
 
 &lt;p&gt;( This post is currently in progress; there will be clean-up later. )&lt;/p&gt;
 
@@ -217,6 +285,8 @@ personal/phusion-jekyll/baseimage-docker on master &lt;span class=&quot;o&quot;&
 &lt;p&gt;&lt;em&gt;I set up this process after trying out a blogging process that was demonstrated by Boyd at a devops / docker / cloud meetup, which he later published on &lt;a href=&quot;http://behemphi.github.io/github-pages/docker/2015/12/02/github-pages-with-docker.html&quot;&gt;his blog&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Blogging with VDJG covers the process that I set up to make this happen. In the first part, I cover everything short of publishing it live. In the second part, I cover publishing it live, and in the third part, I cover what it looks like when I create a new blog entry.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I like to show all my work.  But if you just want to get a blog up in a hurry with this method, I made a short cut!&lt;/p&gt;
 
 &lt;p&gt;( This post is currently in progress; there will be clean-up later. )&lt;/p&gt;
 

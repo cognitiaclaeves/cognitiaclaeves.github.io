@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title>Blogging with VDJG: Part 1.5 - Vagrant, Docker & Jekyll - Shortcut!</title>
+  <meta name="viewport" content="width=device-width">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <link href="/assets/css/colors-light.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+
+
+
+  <header id="header">
+  <!-- <h1><a href="/"><i class="icon-sun"></i> Existential Techie</a></h1> -->
+  <h1><i class="icon-sun"></i> Existential Techie</h1>
+  <a href="/dark/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut">Join the dark side!</a>
+    <p>Linux, Containers ( Docker ), Orchestration ( Kubernetes ), DevOps (.*) -- Oh My!   And other wanderings and ramblings.
+</p>
+  </header>
+
+
+
+  <div id="page">
+
+
+
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li><a href="/light/">Home</a></li>
+          <li><a href="/archives/light">Archive</a></li>
+          <li><a href="/light/about">About</a></li>
+	  <li><a href="http://twitter.com/cognitiaclaeves">Twitter</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div id="content">
+      <article class="post">
+
+	
+		<h1><a href="/light/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut/">Blogging with VDJG: Part 1.5 - Vagrant, Docker & Jekyll - Shortcut!</a></h1>
+	
+
+	
+<div class="post_meta_wrapper">
+	<time datetime="2016-03-08">March  8, 2016</time>
+	<ul class="tag_list">
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/vagrant">vagrant</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/docker">docker</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/github">github</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/jekyll">jekyll</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/blogging">blogging</a>
+	    </li>
+	  
+	</ul>
+</div>
+
+	<div class="post-content"><p>I just finished going through all of the steps of how I created the vagrant-docker-jekyll combo that I use to blog with.</p>
+
+<p>… And then I realized … the whole point of vagrant and docker is to be able to create an environment that can be replicated … so it should theoretically be possible for me to set up the entire environment and provide a few short lines to get the whole thing working, right?  Right.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/phusion/baseimage-docker.git
+<span class="nb">cd </span>baseimage-docker
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/Vagrantfile &gt; Vagrantfile
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/raw/develop/source-files/exec-jekyll.sh &gt; <span class="nb">exec</span>-jekyll.sh
+chmod +x <span class="nb">exec</span>-jekyll.sh
+vagrant up</code></pre></div>
+
+</div>
+
+	<!-- <p class="meta">Posted on <span class="postdate">Mar 08, 2016</span></p> -->
+
+	<!-- <p class="next_actions">To get updates when I post more, <a href="http://twitter.com/cognitiaclaeves/">follow me on the Twitter machine</a>.</p> -->
+
+
+</article>
+
+    </div>
+
+    
+
+  <!-- Add Disqus comments. -->
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'existentialtechie'; // required: replace example with your forum shortname
+    var disqus_identifier = "data-disqus-identifier/light/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut/";
+    var disqus_developer = 1; // Comment out when the site is live
+
+    /* disqusid: data-disqus-identifier */
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+  </div>
+
+
+    <footer id="footer">
+  <p class="copyright">Copyright &copy; 2016 Existential Techie. 
+      <br />Powered by <a href="http://jekyllrb.com">Jekyll</a>, 
+      <a href="http://ethanschoonover.com/solarized#features"> Solarized </a>
+      theme by <a href="http://www.webmaster-source.com">Matt Harzewski</a>
+  </p>
+  </footer>
+
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="/assets/js/jquery.mobilemenu.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
+    });
+  </script>
+
+
+</body>
+</html>

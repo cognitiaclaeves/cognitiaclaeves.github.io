@@ -52,6 +52,61 @@
     <div id="content">
       
   
+	<article class="post">
+
+		
+			<h1><a href="/light/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut/">Blogging with VDJG: Part 1.5 - Vagrant, Docker & Jekyll - Shortcut!</a></h1>
+		
+
+		
+<div class="archive_meta_wrapper">
+	<time datetime="2016-03-08">March  8, 2016</time>
+	<ul class="tag_list">
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/vagrant">vagrant</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/docker">docker</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/github">github</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/jekyll">jekyll</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/blogging">blogging</a>
+	    </li>
+	  
+	</ul>
+</div>
+
+
+		<div class="post-content"><p>I just finished going through all of the steps of how I created the vagrant-docker-jekyll combo that I use to blog with.</p>
+
+<p>… And then I realized … the whole point of vagrant and docker is to be able to create an environment that can be replicated … so it should theoretically be possible for me to set up the entire environment and provide a few short lines to get the whole thing working, right?  Right.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/phusion/baseimage-docker.git
+<span class="nb">cd </span>baseimage-docker
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/Vagrantfile &gt; Vagrantfile
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/raw/develop/source-files/exec-jekyll.sh &gt; <span class="nb">exec</span>-jekyll.sh
+chmod +x <span class="nb">exec</span>-jekyll.sh
+vagrant up</code></pre></div>
+
+</div>
+
+	</article>
+
+  
+
+  
+
+  
 
   
 	<article class="post">
@@ -94,6 +149,8 @@
 <p><em>I set up this process after trying out a blogging process that was demonstrated by Boyd at a devops / docker / cloud meetup, which he later published on <a href="http://behemphi.github.io/github-pages/docker/2015/12/02/github-pages-with-docker.html">his blog</a></em></p>
 
 <p><em>Blogging with VDJG covers the process that I set up to make this happen. In the first part, I cover everything short of publishing it live. In the second part, I cover publishing it live, and in the third part, I cover what it looks like when I create a new blog entry.</em></p>
+
+<p>I like to show all my work.  But if you just want to get a blog up in a hurry with this method, I made a short cut!</p>
 
 <p>( This post is currently in progress; there will be clean-up later. )</p>
 
