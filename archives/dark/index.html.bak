@@ -58,7 +58,7 @@
     
 		<article class="post">
 			
-				<h1><a href="/dark/2016/03/08/Blogging-with-Vagrant-Docker-Jekyll-Shortcut/">Blogging with VDJG: Part 1.5 - Vagrant, Docker & Jekyll - Shortcut!</a></h1>
+				<h1><a href="/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut">Blogging with VDJG: Part 1.5 - Vagrant, Docker & Jekyll - Shortcut!</a></h1>
 			
 
 			
@@ -67,6 +67,10 @@
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/blogging-w-vdjg">blogging-w-vdjg</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
 	      <a class="tag_list_link" href="/tag/vagrant">vagrant</a>
 	    </li>
 	  
@@ -97,7 +101,7 @@
     
 		<article class="post">
 			
-				<h1><a href="/dark/2016/03/03/Blogging-with-Vagrant-Docker-Jekyll-Github/">Blogging with VDJG: Part 1 - Vagrant, Docker & Jekyll</a></h1>
+				<h1><a href="/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Github">Blogging with VDJG: Part 1 - Vagrant, Docker & Jekyll</a></h1>
 			
 
 			
@@ -106,6 +110,10 @@
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/blogging-w-vdjg">blogging-w-vdjg</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
 	      <a class="tag_list_link" href="/tag/vagrant">vagrant</a>
 	    </li>
 	  
@@ -138,7 +146,7 @@
     
 		<article class="post">
 			
-				<h1><a href="/dark/2016/03/03/Holy-Atomic-Operating-Systems-Batman/">Holy Atomic Operating Systems, Batman!</a></h1>
+				<h1><a href="/dark/blog/Holy-Atomic-Operating-Systems-Batman">Holy Atomic Operating Systems, Batman!</a></h1>
 			
 
 			
@@ -173,7 +181,7 @@
     
 		<article class="post">
 			
-				<h1><a href="/dark/2016/01/16/Blog-Fail/">Blog Fail</a></h1>
+				<h1><a href="/dark/blog/Blog-Fail">Blog Fail</a></h1>
 			
 
 			
@@ -226,7 +234,7 @@
     
 		<article class="post">
 			
-				<h1><a href="/dark/2016/01/15/New-blog-first-post/">New Blog, First Post</a></h1>
+				<h1><a href="/dark/blog/New-blog-first-post">New Blog, First Post</a></h1>
 			
 
 			
