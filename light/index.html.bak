@@ -344,8 +344,6 @@ personal/phusion-jekyll/baseimage-docker on master [!?]</code></pre></div>
   
 
   
-
-  
 	<article class="post">
 
 		
@@ -390,6 +388,112 @@ personal/phusion-jekyll/baseimage-docker on master [!?]</code></pre></div>
   
 
   
+
+  
+	<article class="post">
+
+		
+			<h1><a href="/light/blog/The-Next-Blog">The Next Blog</a></h1>
+		
+
+		
+<div class="archive_meta_wrapper">
+	<time datetime="2016-01-17">January 17, 2016</time>
+	<ul class="tag_list">
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/blogging">blogging</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/blog design">blog design</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/wordpress">wordpress</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/jekyll">jekyll</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/lifestyle">lifestyle</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/linux">linux</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/oversharing">oversharing</a>
+	    </li>
+	  
+	</ul>
+</div>
+
+
+		<div class="post-content"><h2 id="goodbye-wordpress">Goodbye Wordpress</h2>
+
+<p>I lost my desire to blog with Wordpress the first time I watched it mangle my spacing, and then enforce whatever it was doing by not taking changes … until my efforts to make it  accept my deisred whitespace wiped out the entire post. I remember feeling particularly angry that I had found a bug report mentioning this … that was … … years … old. Or maybe it was when I was messing around with themes, and I did something in the theme that caused the entire site not to load. Or maybe it was the day that I realized that all the posts are stored in a database, so there’s no easy way to backup. And restoring a Wordpress site? By the time I considered that nightmare, I was determined to avoid that level of hell by avoiding blogging altogether.</p>
+
+<p>It was beginning to feel a lot like Microsoft tech: big, bloated interfaces that save your data in secret places that are a nightmare to back up. … crashes, wasted time … wasted hours, days, ( which I projected would later be followed by weeks and months ).</p>
+
+<p>And I was supposed to maintain a spririt of creativity throught that? Shaking my fists at inanimate computer screens ( which aren’t even part of the problem ) – is not my idea of time well spent.</p>
+
+<p>My experience with Wordpress wasn’t all bad. It gave me standards for a blogging platform:</p>
+
+<ul>
+  <li>I wanted to be able to edit files off-line</li>
+  <li>I wanted the posts to be as effortless to maintain as possible</li>
+  <li>I didn’t want everything in a database</li>
+  <li>As a matter of fact, maybe not a dynamic site, at all</li>
+  <li>I wanted the data backed up to the cloud somewhere</li>
+  <li>I wanted solid revision control</li>
+  <li>I wanted the site to be easily restorable</li>
+</ul>
+
+<p>If you’ve ever worked with Wordpress, you might notice that the list above is sort of the antithesis of Wordpress.</p>
+
+<p>And while I wanted convenience, I still wanted the end result to be more customizable ( and less expensive! ) than those website-in-a-box kind of places.</p>
+
+<p>And then I happened to see a demo where someone had married static site generation ( with Jekyll ) with devops style cleverness. ( I talk about how this site is set up <a href="http://localhost:4000/tags/light/blogging-w-vdjg">here</a>. )</p>
+
+<p>I just knew this was my ticket to a blogging platform that would be a better fit for me.</p>
+
+<p>And it just so happened that this solution came with free revision control (backups) AND free hosting? I hadn’t even dared put on my list of standards that I didn’t want to manage a web hosting account for the site. I didn’t dream I’d find such a thing.</p>
+
+<h2 id="hello-chaos">Hello Chaos</h2>
+
+<p>So, I took the time to duplicate what I saw in the demo, and suddenly found myself confronted with a new, empty page; with chaos. Where the page was once taken up by “helpful” fluff of all kinds, now it was like the page was staring back at me.</p>
+
+<blockquote>
+  <p>Well, what are you going to do now?</p>
+</blockquote>
+
+<p>It was a feeling similar to the feeling I had when I finally succeeded in switching to Linux: I had been used to hand-holding, and suddenly confronted with so much more potential than my hand-holding-conditioned mind could fathom. All of the layers that I had once been comfortably unaware of now held key clues that I needed to understand to use my system efficiently.</p>
+
+<p>What did I want?</p>
+
+<p>My mind boggled at the sheer potential. If I could do anything, what would I do?</p>
+
+<p>I wanted my blog to be friendly to human beings and different devices.  It seemed like Jekyll themes already considered mobile devices and computer screens, out of the box, but friendly to people? How could I ( who am not a web developer ) make such a thing? How would I make it human-friendly?</p>
+
+<p>That was when I remembered my favorite theme: Solarized – which has light and dark choices, both designed to be easy on the eyes. And that was when I realized, that if Jekyll builds static pages in files saved locally to my hard drive, then I could tap into my scripting aptitude to mangle the static files after the build, and create the effect of a dynamic ( theme-switchable ) site with all of the advantages of a static one.</p>
+
+<p>So, apparently, when confronted with chaos, I can build something that I would have never conceived of without staring down the void.</p>
+
+</div>
+
+	</article>
+
+  
+
+  
+
+  
+
+  
 	<article class="post">
 
 		
@@ -430,7 +534,7 @@ personal/phusion-jekyll/baseimage-docker on master [!?]</code></pre></div>
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/light/opinion">opinion</a>
+	      <a class="tag_list_link" href="/tags/light/oversharing">oversharing</a>
 	    </li>
 	  
 	</ul>
@@ -495,89 +599,36 @@ personal/phusion-jekyll/baseimage-docker on master [!?]</code></pre></div>
 
 <p>Hmm. Still seems like a long list. But I think the tradeoff will be worth it.</p>
 
-<hr />
+<blockquote>
+  <p>Update ( March 3, 2016 ) :</p>
 
-<p>Update ( March 3, 2016 ) :</p>
+  <p>I’m now blogging with a Mac through a Vagrant-Docker-Jekyll combo. No mysterious “can’t access the VM / container issues”, though there was an odd caching issue with icons that I solved by removing all the icons and then restarting the vagrant box.</p>
 
-<p>I’m now blogging with a Mac through a Vagrant-Docker-Jekyll combo. No mysterious “can’t access the VM / container issues”, though there was an odd caching issue with icons that I solved by removing all the icons and then restarting the vagrant box.</p>
-
-<p>I’ll include all the steps I took to get this monster working soon!</p>
+  <p>I’ll include all the steps I took to get this monster working soon!</p>
+</blockquote>
 </div>
 
 	</article>
 
   
 
-  
 
-  
-	<article class="post">
 
-		
-			<h1><a href="/light/blog/New-blog-first-post">New Blog, First Post</a></h1>
-		
+
+
+	<div class="postnavigation">
 
 		
-<div class="archive_meta_wrapper">
-	<time datetime="2016-01-15">January 15, 2016</time>
-	<ul class="tag_list">
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/light/jekyll">jekyll</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/light/wordpress">wordpress</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/light/depression">depression</a>
-	    </li>
-	  
-	</ul>
-</div>
+			<span class="nope left">&larr; Newer</span>
+		
 
+		<span class="pages">Page 1 of 2</span>
 
-		<div class="post-content"><p>About a year ago, I tried to start another blog. I have had this nasty habit of trying to start blogs, and then just not keeping up with them. This time was going to be different. Until I started it with Wordpress. I honestly don’t know why anyone has time for that platform. On my first entry, I ran into the issue of Wordpress ignoring my desired line-spacing, and willfully inserting its own. What? I can’t control the output? I have to just settle for whatever Wordpress thinks is sufficient? That’s not my usual relationship with software. I prefer to do the deciding, and for the software to comply. Consistently.</p>
+		
+			<a class="next right" href="/page2/">Older &rarr;</a>
+		
 
-<p>The next gotcha that I ran into was when one of my posts just mysteriously disappeared while writing it. I looked into using plugins to back it up, and then determined that the words that I anticipated spending my time writing … were hidden away in a database somewhere. Worse, it looked like it was going to be a thing to restore a site.</p>
-
-<p>I don’t have time for such things. I live in a word where I allocate most of my time trying to figure out how to get computers to do things. For a while, that was all that I had time to do. Because depression. … It was a balancing act: how to do the work that I need to do to complete my work goals with the time that I’m not under a cloud of darkness?</p>
-
-<p>Today, depression hits me differently. Mostly, I remain standing. The darkness is not nearly as dense. The last few times, I found myself saying that I felt like I could not track my thoughts, but it hadn’t registered as depression to me because there wasn’t a feeling of hopelessness. For now, I’m guessing that this is what depression feels like when the biological process happens and doesn’t trigger a mood drop. I’m guessing this because I’m taking preventative measures against mood drops, like exercising, and observing and curating my thoughts.</p>
-
-<p>My process has led me to intentionally structure my time for more space away from work. I use this time to come closer to achieving that work-life balance that the company was always talking about.</p>
-
-<p>So today, I have time for myself. I consider it mandatory to invest some of that time into exercise. I also choose to spend time with loved ones. And quality of life management.</p>
-
-<p>Quality of life management is a new category for me. So much so, that I’m not really sure what I should call it. For the past two years, I have lived in a room that seems too small for me. It may actually be too small. But I’ve never been able to keep things put away long enough to make that determination. Because there isn’t much space. And depression. … When a wave hit, it used to wash out everything under my feet.</p>
-
-<p>Structuring my work to leave more time for myself was a bold move for me. Accepting that I needed more time than I was getting in order to manage my life was not an easy thing for me to do. At first, I tried a career change.</p>
-
-<p>This was, in itself, huge for me. I went from the software / system administration field to becoming an LMT. While working in a brand new field to me, the difference between being in a field where I truly knew very little, and being in a field that was difficult for a human being to do with his brain, became more evident to me. I had been telling myself that I just wasn’t any good at what I had been doing. But something about working in a new field with very knowledge helped to better frame the evidence I had that I was actually quite skilled in the field that I had left.</p>
-
-<p>I’m off topic. Here’s the short version: I got a new job at the same company doing exactly what I wanted ( instead of what I had been doing ), paying twice as much, with more time off for myself.</p>
-
-<p>With that, I’m back to the present, where I sit typing on 750words.com ( because it seemed interesting to do it that way ), in anticipation of loading this blog post into a new site that doesn’t run Wordpress, but instead, takes advantage of the distributed repository, github, and runs Jekyll in a container to generate these words, literally from plain text paragraphs into what you see right now.</p>
-
-<ul>
-  <li>Backup? Check.</li>
-  <li>Formatting? Check.</li>
-  <li>Efficiency? Check.</li>
-</ul>
-
-<p>In a future post, I’ll address more about Jekyll, and how not having prefabricated css influenced my design decisions.</p>
-</div>
-
-	</article>
-
-  
-
-  
-
-
-
-
+	</div>
 
 
     </div>

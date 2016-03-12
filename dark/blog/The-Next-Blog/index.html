@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title>The Next Blog</title>
+  <meta name="viewport" content="width=device-width">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <link href="/assets/css/colors-dark.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png?" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/images/favicon-16x16.png?" sizes="16x16" />
+
+</head>
+
+<body>
+
+
+
+  <header id="header">
+    <h1><i class="icon-sun"></i> Existential Techie</h1>
+    <a href="/light/blog/The-Next-Blog">Join the light side!</a>
+    <p>Linux, Containers ( Docker ), Orchestration ( Kubernetes ), DevOps (.*) -- Oh My!   And other wanderings and ramblings.
+</p>
+  </header>
+
+
+
+  <div id="page">
+
+
+
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li><a href="/dark/">Home</a></li>
+          <li><a href="/archives/dark">Archive</a></li>
+          <li><a href="/dark/about">About</a></li>
+	  <li><a href="http://twitter.com/cognitiaclaeves">Twitter</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+    <div id="content">
+      <article class="post">
+
+	
+		<h1><a href="/dark/blog/The-Next-Blog">The Next Blog</a></h1>
+	
+
+	
+<div class="post_meta_wrapper">
+	<time datetime="2016-01-17">January 17, 2016</time>
+	<ul class="tag_list">
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/blogging">blogging</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/blog design">blog design</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/wordpress">wordpress</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/jekyll">jekyll</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/lifestyle">lifestyle</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/linux">linux</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/oversharing">oversharing</a>
+	    </li>
+	  
+	</ul>
+</div>
+
+	<div class="post-content"><h2 id="goodbye-wordpress">Goodbye Wordpress</h2>
+
+<p>I lost my desire to blog with Wordpress the first time I watched it mangle my spacing, and then enforce whatever it was doing by not taking changes … until my efforts to make it  accept my deisred whitespace wiped out the entire post. I remember feeling particularly angry that I had found a bug report mentioning this … that was … … years … old. Or maybe it was when I was messing around with themes, and I did something in the theme that caused the entire site not to load. Or maybe it was the day that I realized that all the posts are stored in a database, so there’s no easy way to backup. And restoring a Wordpress site? By the time I considered that nightmare, I was determined to avoid that level of hell by avoiding blogging altogether.</p>
+
+<p>It was beginning to feel a lot like Microsoft tech: big, bloated interfaces that save your data in secret places that are a nightmare to back up. … crashes, wasted time … wasted hours, days, ( which I projected would later be followed by weeks and months ).</p>
+
+<p>And I was supposed to maintain a spririt of creativity throught that? Shaking my fists at inanimate computer screens ( which aren’t even part of the problem ) – is not my idea of time well spent.</p>
+
+<p>My experience with Wordpress wasn’t all bad. It gave me standards for a blogging platform:</p>
+
+<ul>
+  <li>I wanted to be able to edit files off-line</li>
+  <li>I wanted the posts to be as effortless to maintain as possible</li>
+  <li>I didn’t want everything in a database</li>
+  <li>As a matter of fact, maybe not a dynamic site, at all</li>
+  <li>I wanted the data backed up to the cloud somewhere</li>
+  <li>I wanted solid revision control</li>
+  <li>I wanted the site to be easily restorable</li>
+</ul>
+
+<p>If you’ve ever worked with Wordpress, you might notice that the list above is sort of the antithesis of Wordpress.</p>
+
+<p>And while I wanted convenience, I still wanted the end result to be more customizable ( and less expensive! ) than those website-in-a-box kind of places.</p>
+
+<p>And then I happened to see a demo where someone had married static site generation ( with Jekyll ) with devops style cleverness. ( I talk about how this site is set up <a href="http://localhost:4000/tags/dark/blogging-w-vdjg">here</a>. )</p>
+
+<p>I just knew this was my ticket to a blogging platform that would be a better fit for me.</p>
+
+<p>And it just so happened that this solution came with free revision control (backups) AND free hosting? I hadn’t even dared put on my list of standards that I didn’t want to manage a web hosting account for the site. I didn’t dream I’d find such a thing.</p>
+
+<h2 id="hello-chaos">Hello Chaos</h2>
+
+<p>So, I took the time to duplicate what I saw in the demo, and suddenly found myself confronted with a new, empty page; with chaos. Where the page was once taken up by “helpful” fluff of all kinds, now it was like the page was staring back at me.</p>
+
+<blockquote>
+  <p>Well, what are you going to do now?</p>
+</blockquote>
+
+<p>It was a feeling similar to the feeling I had when I finally succeeded in switching to Linux: I had been used to hand-holding, and suddenly confronted with so much more potential than my hand-holding-conditioned mind could fathom. All of the layers that I had once been comfortably unaware of now held key clues that I needed to understand to use my system efficiently.</p>
+
+<p>What did I want?</p>
+
+<p>My mind boggled at the sheer potential. If I could do anything, what would I do?</p>
+
+<p>I wanted my blog to be friendly to human beings and different devices.  It seemed like Jekyll themes already considered mobile devices and computer screens, out of the box, but friendly to people? How could I ( who am not a web developer ) make such a thing? How would I make it human-friendly?</p>
+
+<p>That was when I remembered my favorite theme: Solarized – which has light and dark choices, both designed to be easy on the eyes. And that was when I realized, that if Jekyll builds static pages in files saved locally to my hard drive, then I could tap into my scripting aptitude to mangle the static files after the build, and create the effect of a dynamic ( theme-switchable ) site with all of the advantages of a static one.</p>
+
+<p>So, apparently, when confronted with chaos, I can build something that I would have never conceived of without staring down the void.</p>
+
+</div>
+
+	<!-- <p class="meta">Posted on <span class="postdate">Jan 17, 2016</span></p> -->
+
+	<!-- <p class="next_actions">To get updates when I post more, <a href="http://twitter.com/cognitiaclaeves/">follow me on the Twitter machine</a>.</p> -->
+
+
+</article>
+
+    </div>
+
+
+  
+
+  <!-- Add Disqus comments. -->
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'existentialtechie'; // required: replace example with your forum shortname
+    var disqus_identifier = "data-disqus-identifier/dark/blog/The-Next-Blog";
+    var disqus_developer = 1; // Comment out when the site is live
+
+    /* disqusid: data-disqus-identifier */
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+  </div>
+
+
+    <footer id="footer">
+  <p class="copyright">Copyright &copy; 2016 Existential Techie. 
+      <br />Powered by <a href="http://jekyllrb.com">Jekyll</a>, 
+      <a href="http://ethanschoonover.com/solarized#features"> Solarized </a>
+      theme by <a href="http://www.webmaster-source.com">Matt Harzewski</a>
+  </p>
+  </footer>
+
+
+
+  <!--
+  <footer id="footer">
+  <p class="copyright">Copyright &copy; 2016 Existential Techie. 
+    <br />Powered by <a href="http://jekyllrb.com">Jekyll</a>, 
+    <a href="http://ethanschoonover.com/solarized#features"> solarized </a>
+    theme by <a href="http://www.webmaster-source.com">Matt Harzewski</a></p>
+  </footer>
+  -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="/assets/js/jquery.mobilemenu.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
+    });
+  </script>
+
+
+
+</body>
+</html>

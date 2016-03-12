@@ -144,6 +144,8 @@
     
 	
     
+	
+    
 		<article class="post">
 			
 				<h1><a href="/dark/blog/Holy-Atomic-Operating-Systems-Batman">Holy Atomic Operating Systems, Batman!</a></h1>
@@ -177,6 +179,51 @@
     
 	
     
+		<article class="post">
+			
+				<h1><a href="/dark/blog/The-Next-Blog">The Next Blog</a></h1>
+			
+
+			
+<div class="archive_meta_wrapper">
+	<time datetime="2016-01-17">January 17, 2016</time>
+	<ul class="tag_list">
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/blogging">blogging</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/blog design">blog design</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/wordpress">wordpress</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/jekyll">jekyll</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/lifestyle">lifestyle</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/linux">linux</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/oversharing">oversharing</a>
+	    </li>
+	  
+	</ul>
+</div>
+
+
+			
+      </article>
+   
 	
     
 		<article class="post">
@@ -218,7 +265,7 @@
 	    </li>
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tag/opinion">opinion</a>
+	      <a class="tag_list_link" href="/tag/oversharing">oversharing</a>
 	    </li>
 	  
 	</ul>
@@ -228,6 +275,8 @@
 			
       </article>
    
+	
+    
 	
     
 	
@@ -243,7 +292,7 @@
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tag/jekyll">jekyll</a>
+	      <a class="tag_list_link" href="/tag/blogging">blogging</a>
 	    </li>
 	  
 	    <li class="tag_list_item">
@@ -251,7 +300,15 @@
 	    </li>
 	  
 	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/jekyll">jekyll</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
 	      <a class="tag_list_link" href="/tag/depression">depression</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tag/oversharing">oversharing</a>
 	    </li>
 	  
 	</ul>
