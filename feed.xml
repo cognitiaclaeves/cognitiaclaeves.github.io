@@ -6,8 +6,8 @@
 </description>
     <link>http://cognitiaclaeves.github.io/</link>
     <atom:link href="http://cognitiaclaeves.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 16 Apr 2016 20:07:56 +0000</pubDate>
-    <lastBuildDate>Sat, 16 Apr 2016 20:07:56 +0000</lastBuildDate>
+    <pubDate>Sat, 16 Apr 2016 22:21:34 +0000</pubDate>
+    <lastBuildDate>Sat, 16 Apr 2016 22:21:34 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -69,8 +69,8 @@ personal/phusion-jekyll/baseimage-docker on master [!?]&lt;/code&gt;&lt;/pre&gt;
 
 </description>
         <pubDate>Sat, 16 Apr 2016 14:24:00 +0000</pubDate>
-        <link>http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut%20Revisited</link>
-        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut%20Revisited</guid>
+        <link>http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut-Revisited</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut-Revisited</guid>
         
         <category>blogging-w-vdjg</category>
         
@@ -148,8 +148,8 @@ personal/phusion-jekyll/baseimage-docker on master [!?]&lt;/code&gt;&lt;/pre&gt;
 
 </description>
         <pubDate>Sat, 16 Apr 2016 14:24:00 +0000</pubDate>
-        <link>http://cognitiaclaeves.github.io/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut%20Revisited</link>
-        <guid isPermaLink="true">http://cognitiaclaeves.github.io/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut%20Revisited</guid>
+        <link>http://cognitiaclaeves.github.io/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut-Revisited</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut-Revisited</guid>
         
         <category>blogging-w-vdjg</category>
         
@@ -201,6 +201,8 @@ If you don’t see&lt;/p&gt;
   &lt;p&gt;Then enter this:
 &lt;code&gt;vagrant provision&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;For more details, see &lt;a href=&quot;/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut-Revisited&quot;&gt;the next post in the series&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 08 Mar 2016 23:00:00 +0000</pubDate>
         <link>http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut</link>
@@ -256,6 +258,8 @@ If you don’t see&lt;/p&gt;
   &lt;p&gt;Then enter this:
 &lt;code&gt;vagrant provision&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;For more details, see &lt;a href=&quot;/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut-Revisited&quot;&gt;the next post in the series&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 08 Mar 2016 23:00:00 +0000</pubDate>
         <link>http://cognitiaclaeves.github.io/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut</link>
