@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>Blogging with VDJG: Part 1.5 - Vagrant, Docker & Jekyll - Shortcut!</title>
+  <title>Blogging with VDJG: Part 1.75 - Vagrant, Docker & Jekyll - Return from the Void</title>
   <meta name="viewport" content="width=device-width">
 
   <!--[if lt IE 9]>
@@ -24,7 +24,7 @@
 
   <header id="header">
     <h1><i class="icon-sun"></i> Existential Techie</h1>
-    <a href="/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut">Join the light side!</a>
+    <a href="/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut Revisited">Join the light side!</a>
     <p>Linux, Containers ( Docker ), Orchestration ( Kubernetes ), DevOps (.*) -- Oh My!   And other wanderings and ramblings.
 </p>
   </header>
@@ -53,12 +53,12 @@
       <article class="post">
 
 	
-		<h1><a href="/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut">Blogging with VDJG: Part 1.5 - Vagrant, Docker & Jekyll - Shortcut!</a></h1>
+		<h1><a href="/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut%20Revisited">Blogging with VDJG: Part 1.75 - Vagrant, Docker & Jekyll - Return from the Void</a></h1>
 	
 
 	
 <div class="post_meta_wrapper">
-	<time datetime="2016-03-08">March  8, 2016</time>
+	<time datetime="2016-04-16">April 16, 2016</time>
 	<ul class="tag_list">
 	  
 	    <li class="tag_list_item">
@@ -88,40 +88,64 @@
 	</ul>
 </div>
 
-	<div class="post-content"><p>I just finished going through all of the steps of how I created the vagrant-docker-jekyll combo that I use to blog with.</p>
+	<div class="post-content"><p>Walking away from a project and coming back about a month later is a great way to test the user-friendliness / accessibility of a solution! I must have forgotten … nearly everything … about how I set this blog up. … When I went to make an update, I even started out in the wrong place!</p>
 
-<p>… And then I realized … the whole point of vagrant and docker is to be able to create an environment that can be replicated … so it should theoretically be possible for me to set up the entire environment and provide a few short lines to get the whole thing working, right?  Right.</p>
+<p>So here are the gotcha’s that became apparent to me as I tried to break back into blogging.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/phusion/baseimage-docker.git
-cd baseimage-docker
-mkdir data
-curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/Vagrantfile &gt; Vagrantfile
-curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/exec-jekyll.sh &gt; exec-jekyll.sh
-chmod +x exec-jekyll.sh
-vagrant up</code></pre></div>
+<h3 id="gotcha-1">Gotcha #1</h3>
 
-<blockquote>
-  <p>Update 4/16/2016 –
-If you don’t see</p>
+<p>The <a href="/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut">short cut</a> that includes a custom Vagrantfile meant to encapsulate my custom script for executing Jekyll inside of docker inside of Vagrant … leaves the git repo for phusion’s baseimage-docker in a mixed state:</p>
 
-</blockquote>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; ==&gt; default: Running Jekyll!
-&gt; ==&gt; default: Github does not allow user dependencies.
-&gt; ==&gt; default: Configuration file: /srv/jekyll/_config.yml
-&gt; ==&gt; default:             Source: /srv/jekyll
-&gt; ==&gt; default:        Destination: /srv/jekyll/_site
-&gt; ==&gt; default:       Generating...
-&gt; ==&gt; default:                     done.
-&gt;</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">➔ git status
+On branch master
+Your branch is up-to-date with &#39;origin/master&#39;.
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
 
-<blockquote>
+        modified:   Vagrantfile
 
-  <p>Then enter this:
-<code>vagrant provision</code></p>
-</blockquote>
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        data/
+        exec-jekyll.sh
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+
+personal/phusion-jekyll/baseimage-docker on master [!?]</code></pre></div>
+
+<p>While this looks like something was left incomplete, it’s not. I might revisit this in the future.</p>
+
+<h3 id="gotcha-2">Gotcha #2</h3>
+
+<p><code>vagrant up</code> is not the only thing that needs to be executed to get jekyll going. <code>vagrant up</code> by itself really only sets up phusion’s baseimage. When it runs, it prints out this ( somewhat confusing ) message:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">==&gt; default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==&gt; default: flag to force provisioning. Provisioners marked to run always will still run.</code></pre></div>
+
+<p>One might wonder: why run <code>vagrant provision</code> when the message just said that the machine is already provisioned. In fact, running <code>vagrant provision</code> is exactly the the thing needed to kick off my custom script ( which kicks off jekyll - within Vagrant )</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">➔ vagrant provision
+==&gt; default: Running provisioner: shell...
+    default: Running: /var/folders/9s/320v29913qs9j6kzxnqv7smclw01rh/T/vagrant-shell20160416-8
+3777-1t0dsij.sh
+==&gt; default: stdin: is not a tty
+==&gt; default: jekyll_runtime
+==&gt; default: jekyll_runtime
+==&gt; default: Running Jekyll!
+==&gt; default: Github does not allow user dependencies.
+==&gt; default: Configuration file: /srv/jekyll/_config.yml
+==&gt; default:             Source: /srv/jekyll
+==&gt; default:        Destination: /srv/jekyll/_site
+==&gt; default:       Generating...
+==&gt; default:                     done.</code></pre></div>
+
+<p>So, two gotcha’s later, and I’m back in business. As far as ramping back up on cold projects goes, that’s not too bad.</p>
+
 </div>
 
-	<!-- <p class="meta">Posted on <span class="postdate">Mar 08, 2016</span></p> -->
+	<!-- <p class="meta">Posted on <span class="postdate">Apr 16, 2016</span></p> -->
 
 	<!-- <p class="next_actions">To get updates when I post more, <a href="http://twitter.com/cognitiaclaeves/">follow me on the Twitter machine</a>.</p> -->
 
@@ -138,7 +162,7 @@ If you don’t see</p>
   <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'existentialtechie'; // required: replace example with your forum shortname
-    var disqus_identifier = "data-disqus-identifier/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut";
+    var disqus_identifier = "data-disqus-identifier/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut%20Revisited";
     var disqus_developer = 1; // Comment out when the site is live
 
     /* disqusid: data-disqus-identifier */

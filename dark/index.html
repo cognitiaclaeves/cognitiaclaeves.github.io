@@ -55,6 +55,109 @@
 	<article class="post">
 
 		
+			<h1><a href="/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut%20Revisited">Blogging with VDJG: Part 1.75 - Vagrant, Docker & Jekyll - Return from the Void</a></h1>
+		
+
+		
+<div class="archive_meta_wrapper">
+	<time datetime="2016-04-16">April 16, 2016</time>
+	<ul class="tag_list">
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/blogging-w-vdjg">blogging-w-vdjg</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/vagrant">vagrant</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/docker">docker</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/github">github</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/jekyll">jekyll</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/dark/blogging">blogging</a>
+	    </li>
+	  
+	</ul>
+</div>
+
+
+		<div class="post-content"><p>Walking away from a project and coming back about a month later is a great way to test the user-friendliness / accessibility of a solution! I must have forgotten … nearly everything … about how I set this blog up. … When I went to make an update, I even started out in the wrong place!</p>
+
+<p>So here are the gotcha’s that became apparent to me as I tried to break back into blogging.</p>
+
+<h3 id="gotcha-1">Gotcha #1</h3>
+
+<p>The <a href="/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut">short cut</a> that includes a custom Vagrantfile meant to encapsulate my custom script for executing Jekyll inside of docker inside of Vagrant … leaves the git repo for phusion’s baseimage-docker in a mixed state:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">➔ git status
+On branch master
+Your branch is up-to-date with &#39;origin/master&#39;.
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+        modified:   Vagrantfile
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        data/
+        exec-jekyll.sh
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+
+personal/phusion-jekyll/baseimage-docker on master [!?]</code></pre></div>
+
+<p>While this looks like something was left incomplete, it’s not. I might revisit this in the future.</p>
+
+<h3 id="gotcha-2">Gotcha #2</h3>
+
+<p><code>vagrant up</code> is not the only thing that needs to be executed to get jekyll going. <code>vagrant up</code> by itself really only sets up phusion’s baseimage. When it runs, it prints out this ( somewhat confusing ) message:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">==&gt; default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==&gt; default: flag to force provisioning. Provisioners marked to run always will still run.</code></pre></div>
+
+<p>One might wonder: why run <code>vagrant provision</code> when the message just said that the machine is already provisioned. In fact, running <code>vagrant provision</code> is exactly the the thing needed to kick off my custom script ( which kicks off jekyll - within Vagrant )</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">➔ vagrant provision
+==&gt; default: Running provisioner: shell...
+    default: Running: /var/folders/9s/320v29913qs9j6kzxnqv7smclw01rh/T/vagrant-shell20160416-8
+3777-1t0dsij.sh
+==&gt; default: stdin: is not a tty
+==&gt; default: jekyll_runtime
+==&gt; default: jekyll_runtime
+==&gt; default: Running Jekyll!
+==&gt; default: Github does not allow user dependencies.
+==&gt; default: Configuration file: /srv/jekyll/_config.yml
+==&gt; default:             Source: /srv/jekyll
+==&gt; default:        Destination: /srv/jekyll/_site
+==&gt; default:       Generating...
+==&gt; default:                     done.</code></pre></div>
+
+<p>So, two gotcha’s later, and I’m back in business. As far as ramping back up on cold projects goes, that’s not too bad.</p>
+
+</div>
+
+	</article>
+
+  
+
+  
+
+  
+	<article class="post">
+
+		
 			<h1><a href="/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut">Blogging with VDJG: Part 1.5 - Vagrant, Docker & Jekyll - Shortcut!</a></h1>
 		
 
@@ -95,19 +198,36 @@
 
 <p>… And then I realized … the whole point of vagrant and docker is to be able to create an environment that can be replicated … so it should theoretically be possible for me to set up the entire environment and provide a few short lines to get the whole thing working, right?  Right.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/phusion/baseimage-docker.git
-<span class="nb">cd </span>baseimage-docker
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/phusion/baseimage-docker.git
+cd baseimage-docker
 mkdir data
 curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/Vagrantfile &gt; Vagrantfile
-curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/exec-jekyll.sh &gt; <span class="nb">exec</span>-jekyll.sh
-chmod +x <span class="nb">exec</span>-jekyll.sh
+curl https://raw.githubusercontent.com/cognitiaclaeves/source.cognitiaclaeves.github.io/develop/source-files/exec-jekyll.sh &gt; exec-jekyll.sh
+chmod +x exec-jekyll.sh
 vagrant up</code></pre></div>
 
+<blockquote>
+  <p>Update 4/16/2016 –
+If you don’t see</p>
+
+</blockquote>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; ==&gt; default: Running Jekyll!
+&gt; ==&gt; default: Github does not allow user dependencies.
+&gt; ==&gt; default: Configuration file: /srv/jekyll/_config.yml
+&gt; ==&gt; default:             Source: /srv/jekyll
+&gt; ==&gt; default:        Destination: /srv/jekyll/_site
+&gt; ==&gt; default:       Generating...
+&gt; ==&gt; default:                     done.
+&gt;</code></pre></div>
+
+<blockquote>
+
+  <p>Then enter this:
+<code>vagrant provision</code></p>
+</blockquote>
 </div>
 
 	</article>
-
-  
 
   
 
@@ -344,6 +464,8 @@ personal/phusion-jekyll/baseimage-docker on master [!?]</code></pre></div>
   
 
   
+
+  
 	<article class="post">
 
 		
@@ -488,127 +610,6 @@ personal/phusion-jekyll/baseimage-docker on master [!?]</code></pre></div>
 	</article>
 
   
-
-  
-
-  
-
-  
-	<article class="post">
-
-		
-			<h1><a href="/dark/blog/Blog-Fail">Blog Fail</a></h1>
-		
-
-		
-<div class="archive_meta_wrapper">
-	<time datetime="2016-01-16">January 16, 2016</time>
-	<ul class="tag_list">
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/jekyll">jekyll</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/docker">docker</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/docker-machine">docker-machine</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/vagrant">vagrant</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/github">github</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/git">git</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/blogging">blogging</a>
-	    </li>
-	  
-	    <li class="tag_list_item">
-	      <a class="tag_list_link" href="/tags/dark/oversharing">oversharing</a>
-	    </li>
-	  
-	</ul>
-</div>
-
-
-		<div class="post-content"><p>In my last post, I pretty much slammed Wordpress and mentioned that I was using a <a href="https://jekyllrb.com">Jekyll</a> container to convert simple paragraphs ( Markdown files ) into web pages. Well, when I went to update my blog with my first post, I ran into a few issues that meant that the post never actually made it onto the blog.</p>
-
-<p>Since I’m here at these crossroads now, I’ll blog about the issue that prevented Jekyll from working. In a word, the issue seems to be ‘docker-machine’.</p>
-
-<p>I’m relatively new to container tech. To get Docker running on my laptop ( MacBook Air ), I first went to Docker. They had a friendly Mac install, and I soon found myself running hello-world ( through VirtualBox ). I don’t recall why, but I also found myself checking out Vagrant. Through <a href="https://www.vagrantup.com">Vagrant</a>, I found myself running a similar container. I didn’t really see the difference between the two.</p>
-
-<p>Well, one possible difference concerns the issue that I had with docker-machine when I tried to run the Jekyll container: docker doesn’t actually run on the Mac. Instead, docker-machine does this weird thing where it sets environment variables, and the docker command can then be magically accessed. At least for a while. In the case of the Jekyll container, when I was originally setting up my blog, I had set up the container with no issues, and then run it many times, with no issues. Then I had shut down the container. I had anticipated that it would just sit there, and be ready when I needed it. After all, it was a container: if it ran once successfully, since nothing persists in containers unless written to specially mounted volumes, then it should run perfectly, every time.</p>
-
-<p>As I mentioned, that was not the case. I was getting errors from docker. ( I have since stopped using docker-machine on the mac, so I can’t cite what they were. )</p>
-
-<p>I recalled that I had also seen this at work. I had been unable to find a solution on Google, and had ultimately found a post where an error that seemed fundamental enough that it really needed to be fixed, remained in an un-fixed state after some time. Months? Years? I really don’t recall. But I did know that I needed the thing I was working on to be fixed today, so I  reimplemented it using Vagrant instead:</p>
-
-<p>I recalled finding a nice <a href="https://hub.docker.com/r/phusion/baseimage/">image</a> in a Vagrantfile produced by a group that calls themselves <a href="http://www.phusion.nl">Phusion</a> when I was trying to get a container going with <a href="https://hub.docker.com/r/grafana/grafana/">grafana</a> and <a href="https://hub.docker.com/r/hopsoft/graphite-statsd/">graphite</a>. Instead of relying on magically accessing the docker command, a VM was created by Vagrant that itself ran docker.</p>
-
-<p>It could very well be that I’m just not running docker-machine the correct way. That maybe something happens when I shut my laptop and put it into sleep mode. Or maybe I need to shut down the terminal where I set the environment variables. However, when discussing this with my supervisor later that day, he commented that he had ditched docker-machine for Vagrant, as well. From a user-experience perspective, Vagrant just works.</p>
-
-<p>The Jekyll container approach to blogging on github was mentioned in a docker/cloud meetup that I went to. After the meetup, Boyd posted the link to <a href="http://behemphi.github.io/github-pages/docker/2015/12/02/github-pages-with-docker.html">his blog</a> where he details how to set it up.</p>
-
-<p>Because I ran into the same issues that I ran into at work with docker-machine, I intend to set a Jekyll container environment up in Vagrant, which I consider to be much more stable.</p>
-
-<p>So the process will look like this:</p>
-
-<ul>
-  <li>Configure a github.io account</li>
-  <li>Install Vagrant and VirtualBox</li>
-  <li>Get and build the VM that runs Docker</li>
-  <li>Within the image, build the Jekyll image</li>
-  <li>Run the Jekyll image</li>
-  <li>Set up a base blog</li>
-  <li>Make a change, commit the repo</li>
-</ul>
-
-<p>Now that I’ve listed the steps out, it doesn’t seem as straightforward as it did in my head. Then again, consider that what I am aiming to do is to build an environment that will convert simple paragraphs to a version-controlled ( backed up ) blog ( that can be worked on, though not updated ) without an internet connection – in effect, build a blogging platform that replaces the need for Wordpress ( for simple content ).</p>
-
-<p>I don’t mind taking a few extra steps to get this set up, so long as the end result is that I can run it at will, when I want to, and the work is backed up.</p>
-
-<p>Once this blog is set up, the creative process should look like this:</p>
-
-<ul>
-  <li>vagrant up / vagrant resume</li>
-  <li>make local changes to markdown files</li>
-  <li>run mangling scripts ( for the dual-theme static site )</li>
-  <li>check local copy</li>
-  <li>commit changes to (web) source repo</li>
-  <li>vagrant halt / vagrant suspend</li>
-</ul>
-
-<p>( all of that can be done without access to the net ), then, when the net is accessible:</p>
-
-<ul>
-  <li>push changes to source repo</li>
-  <li>cd into _site directory, push changes to site repo</li>
-</ul>
-
-<p>The last step will result in updating the live site.</p>
-
-<p>Hmm. Still seems like a long list. But I think the tradeoff will be worth it.</p>
-
-<blockquote>
-  <p>Update ( March 3, 2016 ) :</p>
-
-  <p>I’m now blogging with a Mac through a Vagrant-Docker-Jekyll combo. No mysterious “can’t access the VM / container issues”, though there was an odd caching issue with icons that I solved by removing all the icons and then restarting the vagrant box.</p>
-
-  <p>I’ll include all the steps I took to get this monster working soon!</p>
-</blockquote>
-</div>
-
-	</article>
 
   
 
