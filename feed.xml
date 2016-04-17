@@ -6,9 +6,105 @@
 </description>
     <link>http://cognitiaclaeves.github.io/</link>
     <atom:link href="http://cognitiaclaeves.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 16 Apr 2016 22:21:34 +0000</pubDate>
-    <lastBuildDate>Sat, 16 Apr 2016 22:21:34 +0000</lastBuildDate>
+    <pubDate>Sun, 17 Apr 2016 01:02:06 +0000</pubDate>
+    <lastBuildDate>Sun, 17 Apr 2016 01:02:06 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Mar-April 2016 Update</title>
+        <description>&lt;p&gt;Quick status update.&lt;/p&gt;
+
+&lt;p&gt;It seems like I’ve had absolutely no time lately.&lt;/p&gt;
+
+&lt;p&gt;I’ve been focusing on a number of new technologies at work: top on the list has been learning Ansible and creating playbooks to configure ‘stock’ atomic-host servers for kubernetes. I’ve got plenty to say about Ansible, so I plan on starting a series of posts on it in the very near future.&lt;/p&gt;
+
+&lt;p&gt;I have a few things to say about running Kubernetes “virtual metal”. It almost feels like no one else is doing this …&lt;/p&gt;
+
+&lt;p&gt;Last week we had a contractor from Datastax come in to go over the Datastax Enterprise stack. I’m still getting familiar with Datastax, Spark, SOLR, and Cassandra. There may be some posts about them a little further in the future.&lt;/p&gt;
+
+&lt;p&gt;Security is an ongoing theme while planning future microservices architecture running in  Kubernetes. I plan on posting some background on what we do to ensure our microservices infrastructure is secure enough for the financial sector.&lt;/p&gt;
+
+&lt;p&gt;Continuous integration is also around the corner. We’ll be using Jenkins to test out and deploy the docker containers and tests that come from developers. It became apparent while I was working through the process that there are a number of ways to do this sub-optimally, so I plan on covering this topic.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 16 Apr 2016 23:00:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/light/blog/Quick-Update</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/blog/Quick-Update</guid>
+        
+        <category>docker</category>
+        
+        <category>atomic host</category>
+        
+        <category>ansible</category>
+        
+        <category>kubernetes</category>
+        
+        <category>datastax</category>
+        
+        <category>cassandra</category>
+        
+        <category>continuous integration</category>
+        
+        <category>testing</category>
+        
+        <category>jenkins</category>
+        
+        <category>security</category>
+        
+        <category>blogging</category>
+        
+        
+        <category>light</category>
+        
+      </item>
+    
+      <item>
+        <title>Mar-April 2016 Update</title>
+        <description>&lt;p&gt;Quick status update.&lt;/p&gt;
+
+&lt;p&gt;It seems like I’ve had absolutely no time lately.&lt;/p&gt;
+
+&lt;p&gt;I’ve been focusing on a number of new technologies at work: top on the list has been learning Ansible and creating playbooks to configure ‘stock’ atomic-host servers for kubernetes. I’ve got plenty to say about Ansible, so I plan on starting a series of posts on it in the very near future.&lt;/p&gt;
+
+&lt;p&gt;I have a few things to say about running Kubernetes “virtual metal”. It almost feels like no one else is doing this …&lt;/p&gt;
+
+&lt;p&gt;Last week we had a contractor from Datastax come in to go over the Datastax Enterprise stack. I’m still getting familiar with Datastax, Spark, SOLR, and Cassandra. There may be some posts about them a little further in the future.&lt;/p&gt;
+
+&lt;p&gt;Security is an ongoing theme while planning future microservices architecture running in  Kubernetes. I plan on posting some background on what we do to ensure our microservices infrastructure is secure enough for the financial sector.&lt;/p&gt;
+
+&lt;p&gt;Continuous integration is also around the corner. We’ll be using Jenkins to test out and deploy the docker containers and tests that come from developers. It became apparent while I was working through the process that there are a number of ways to do this sub-optimally, so I plan on covering this topic.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 16 Apr 2016 23:00:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/dark/blog/Quick-Update</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/dark/blog/Quick-Update</guid>
+        
+        <category>docker</category>
+        
+        <category>atomic host</category>
+        
+        <category>ansible</category>
+        
+        <category>kubernetes</category>
+        
+        <category>datastax</category>
+        
+        <category>cassandra</category>
+        
+        <category>continuous integration</category>
+        
+        <category>testing</category>
+        
+        <category>jenkins</category>
+        
+        <category>security</category>
+        
+        <category>blogging</category>
+        
+        
+        <category>dark</category>
+        
+      </item>
     
       <item>
         <title>Blogging with VDJG: Part 1.75 - Vagrant, Docker &amp; Jekyll - Return from the Void</title>
@@ -292,214 +388,6 @@ If you don’t see&lt;/p&gt;
   &lt;p&gt;This series covers the process I set up, in detail. In the first part, I cover everything short of publishing it live. In the second part, I cover publishing it live, and in the third part, I cover what it looks like when I create a new blog entry.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I like to show all my work.  But if you just want to get a blog up in a hurry with this method, I made a &lt;a href=&quot;/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut&quot;&gt;short cut&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;( This post is currently in progress; there will be clean-up later. )&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;~/personal
-➔ mkdir phusion-jekyll; cd phusion-jekyll
-
-~/personal/phusion-jekyll
-➔ git clone https://github.com/phusion/baseimage-docker.git
-Cloning into &amp;#39;baseimage-docker&amp;#39;...
-remote: Counting objects: 1193, done.
-remote: Total 1193 (delta 0), reused 0 (delta 0), pack-reused 1193
-Receiving objects: 100% (1193/1193), 1.48 MiB | 1.57 MiB/s, done.
-Resolving deltas: 100% (699/699), done.
-Checking connectivity... done.
-
-~/personal/phusion-jekyll
-➔ cd baseimage-docker
-
-personal/phusion-jekyll/baseimage-docker on master
-➔ ls
-CONTRIBUTING.md Makefile README_zh_tw.md install-tools.sh
-Changelog.md README.md Vagrantfile test
-LICENSE.txt README_ZH_cn_.md image tools
-
-personal/phusion-jekyll/baseimage-docker on master
-➔ vagrant up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Warning: The next line causes vagrant to allow running VM instance to access the files on your local machine. Know what you’re doing when you give any VM or container access to your local machine.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;For the sake of convenience, I want a folder in the VM to directly reference my work folder (future github) folder, so I add this line:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;config.vm.synced_folder &quot;data&quot;, &quot;/home/vagrant/data&quot;&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;➔ tail -6 Vagrantfile
-    config.vm.provision :shell, :inline =&amp;gt; $script
-  end
-
-  config.vm.synced_folder &amp;quot;data&amp;quot;, &amp;quot;/home/vagrant/data&amp;quot;
-
-end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then I create the data folder and restart the vagrant box:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;personal/phusion-jekyll/baseimage-docker on master [!]
-➔ mkdir data; vagrant halt; vagrant up
-
-==&amp;gt; default: Attempting graceful shutdown of VM...
-
-Bringing machine &amp;#39;default&amp;#39; up with &amp;#39;virtualbox&amp;#39; provider...
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;My new folder is at the top of this list:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;==&amp;gt; default: Mounting shared folders...
-default: /home/vagrant/data =&amp;gt; /Users/jno/personal/phusion-jekyll/baseimage-docker/data
-default: /vagrant/baseimage-docker =&amp;gt; /Users/jno/personal/phusion-jekyll/baseimage-docker
-default: /vagrant =&amp;gt; /Users/jno/personal/phusion-jekyll/baseimage-docker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Next, I run the following in the vagrant session, to build the initial files:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cd data
-docker run \
-  --interactive \
-  --label=jekyll \
-  --publish 4000:4000 \
-  --rm \ 
-  --tty \
-  --volume=$(pwd):/srv/jekyll 
-  jekyll/jekyll:pages jekyll new . --force&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The volume specification above is similar to the shared folder mount earlier, except for containers. At this time, this is considered more dangerous, by some. In this case, it’s pretty safe, as it only allows the docker container direct access to a path in the VM, and not your localhost.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I was going to include a screenshot here of what it should look like when the above command is run, but I spent the time making the &lt;a href=&quot;/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut&quot;&gt;short cut&lt;/a&gt; instead.&lt;/p&gt;
-
-&lt;p&gt;.. and create this file (phusion-jekyll/baseimage-docker/exec-jekyll.sh), to run the jekyll container:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /home/vagrant/data
-docker stop jekyll_runtime 2&amp;gt; /dev/null
-docker rm -v jekyll_runtime 2&amp;gt; /dev/null
-docker run &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    --env &lt;span class=&quot;nv&quot;&gt;FORCE_POLLING&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    --env &lt;span class=&quot;nv&quot;&gt;JEKYLL_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;development &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    --env &lt;span class=&quot;nv&quot;&gt;VERBOSE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    --label&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;jekyll &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    --name&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;jekyll_runtime &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    --publish &lt;span class=&quot;s2&quot;&gt;&amp;quot;0.0.0.0:4000:80&amp;quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    --rm &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    --volume&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$(pwd):/srv/jekyll&amp;quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
-    jekyll/jekyll:pages jekyll build --watch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;… and make the file executable:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;➔ chmod +x exec-jekyll.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To make the webserver in the container accessible, and to execute my new script, I add these lines to the Vagrantfile that I edited before:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;...
-
-  config.vm.synced_folder &amp;quot;data&amp;quot;, &amp;quot;/home/vagrant/data&amp;quot;
-  config.vm.network :forwarded_port, guest: 4000, host: 4000
-  config.vm.provision &amp;quot;shell&amp;quot;, path: &amp;quot;exec-jekyll.sh&amp;quot;
-end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;vagrant provision&lt;/code&gt; runs the script:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;personal/phusion-jekyll/baseimage-docker on master [!]
-➔ vagrant provision
-==&amp;gt; default: Running provisioner: shell...
-        default: Running: /var/folders/9s/320v29913qs9j6kzxnqv7smclw01rh/T/vagrant-shell201
-60302-97040-1s32frt.sh
-==&amp;gt; default: stdin: is not a tty
-==&amp;gt; default: jekyll_runtime
-==&amp;gt; default: Github does not allow user dependencies.
-==&amp;gt; default: Configuration file: /srv/jekyll/_config.yml
-==&amp;gt; default: Source: /srv/jekyll
-==&amp;gt; default: Destination: /srv/jekyll/_site
-==&amp;gt; default: Generating...
-==&amp;gt; default: done.
-==&amp;gt; default: Auto-regeneration: enabled for &amp;#39;/srv/jekyll&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, I can browse to: http://localhost:4000, and click on the “Welcome to Jekyll” link.&lt;/p&gt;
-
-&lt;p&gt;This link was generated from data/_posts/[date]-welcome-to-jekyll.markdown&lt;/p&gt;
-
-&lt;p&gt;I switch to another terminal and edit the file locally:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;post&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Welcome&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;...&lt;/span&gt; 
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;jekyll update&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;You’ll find this post in your `_posts` directory. ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I change the above to:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;post&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Welcome&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;...&lt;/span&gt; 
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;jekyll update&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;You’ll find this SAMPLE post in your `_posts` directory. ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and when I save the file, I see activity in the previous terminal session:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;...
-==&amp;gt; default: done.
-==&amp;gt; default: Auto-regeneration: enabled for &amp;#39;/srv/jekyll&amp;#39;
-==&amp;gt; default: Regenerating: 1 file(s) changed at 2016-03-02 23:47:21&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Finally, when I refresh the localhost:4000, it’s updated!&lt;/p&gt;
-
-&lt;p&gt;When I’m finished updating my site, I take the vagrant box down:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;==&amp;gt; default:       Regenerating: 1 file(s) changed at 2016-03-03 15:00:13
-==&amp;gt; default: ...done in 0.860794742 seconds.
-^C==&amp;gt; default: Waiting for cleanup before exiting...
-^C==&amp;gt; default: Exiting immediately, without cleanup!
-
-personal/phusion-jekyll/baseimage-docker on master [!?]
-➔ vagrant halt
-==&amp;gt; default: Attempting graceful shutdown of VM...
-
-personal/phusion-jekyll/baseimage-docker on master [!?]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s the process. Be sure to check out my shortcut for a handy script that does all the work for you!&lt;/p&gt;
-
-&lt;p&gt;I actually do a little more work to get the switchable theme in my static website. This work amounts to mangling the generated files with the use of a bash and a python script.&lt;/p&gt;
-
-&lt;p&gt;For the next blog in this series, I’ll post how to easily work github pages into this, and then my steps to create a new blog entry, after all the setup is done.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 03 Mar 2016 08:08:00 +0000</pubDate>
-        <link>http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Github</link>
-        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Github</guid>
-        
-        <category>blogging-w-vdjg</category>
-        
-        <category>vagrant</category>
-        
-        <category>docker</category>
-        
-        <category>github</category>
-        
-        <category>jekyll</category>
-        
-        <category>blogging</category>
-        
-        
-        <category>light</category>
-        
-      </item>
-    
-      <item>
-        <title>Blogging with VDJG: Part 1 - Vagrant, Docker &amp; Jekyll</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;This blog is set up to be able to add and view new entries offline ( as text files ), and then push changes into a source repository to trigger live site updates ( as website files ). I use a Jekyll Docker container running in Vagrant to take the site from text files to HTML.&lt;/p&gt;
-
-  &lt;p&gt;My process was inspired by a blogging process demonstrated by Boyd Boyd Hemphill at a devops / docker / cloud meetup, which he published on &lt;a href=&quot;http://behemphi.github.io/github-pages/docker/2015/12/02/github-pages-with-docker.html&quot;&gt;his blog&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;This series covers the process I set up, in detail. In the first part, I cover everything short of publishing it live. In the second part, I cover publishing it live, and in the third part, I cover what it looks like when I create a new blog entry.&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;p&gt;I like to show all my work.  But if you just want to get a blog up in a hurry with this method, I made a &lt;a href=&quot;/dark/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut&quot;&gt;short cut&lt;/a&gt;!&lt;/p&gt;
 
 &lt;p&gt;( This post is currently in progress; there will be clean-up later. )&lt;/p&gt;
@@ -699,27 +587,207 @@ personal/phusion-jekyll/baseimage-docker on master [!?]&lt;/code&gt;&lt;/pre&gt;
       </item>
     
       <item>
-        <title>Holy Atomic Operating Systems, Batman!</title>
-        <description>&lt;p&gt;This one is going to be short. My company has a weekly ‘Docker Roundup’ that the ‘Misfits of Docker’ participate in. We use an hour each week to explore what all of us are working on that’s related to containers and container orchestration.&lt;/p&gt;
+        <title>Blogging with VDJG: Part 1 - Vagrant, Docker &amp; Jekyll</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;This blog is set up to be able to add and view new entries offline ( as text files ), and then push changes into a source repository to trigger live site updates ( as website files ). I use a Jekyll Docker container running in Vagrant to take the site from text files to HTML.&lt;/p&gt;
 
-&lt;p&gt;Additionally, we’ve recently started having a ‘theme’ for the meeting, a task to accomplish related to containers or container orchestration.&lt;/p&gt;
+  &lt;p&gt;My process was inspired by a blogging process demonstrated by Boyd Boyd Hemphill at a devops / docker / cloud meetup, which he published on &lt;a href=&quot;http://behemphi.github.io/github-pages/docker/2015/12/02/github-pages-with-docker.html&quot;&gt;his blog&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;For the last one, I requested that we cover Atomic Hosts. We followed &lt;a href=&quot;http://www.projectatomic.io/docs/gettingstarted/&quot;&gt;this guide&lt;/a&gt; – I should point out that we followed the directions almost exactly, even though some strings had changed, with the exception of the 192.* IP addresses.  We replicated the steps on an AWS cluster.&lt;/p&gt;
+  &lt;p&gt;This series covers the process I set up, in detail. In the first part, I cover everything short of publishing it live. In the second part, I cover publishing it live, and in the third part, I cover what it looks like when I create a new blog entry.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;It was a bit odd to instantiate a pod directly in kubernetes ( rather than a replication controller ), so we moved onto another guide that included an expose command, and that’s about where our success ended: Amazon and Kubernetes don’t know each other well enough for Amazon to respond to the expose command.&lt;/p&gt;
+&lt;p&gt;I like to show all my work.  But if you just want to get a blog up in a hurry with this method, I made a &lt;a href=&quot;/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut&quot;&gt;short cut&lt;/a&gt;!&lt;/p&gt;
 
-&lt;p&gt;Other than that, though, the experience went pretty well: We were able to get a modern kubernetes cluster working that could create a single pod ( or replicated pods ) in under an hour. This was, by far, the fastest way to get a kubernetes cluster working on the cloud. Everything else that we’ve tried - CentOS guides and coreOS guides - have resulted in more work than an hour’s worth. Recently I found one in Kubernetes/Contrib that uses Vagrant to set up the entire cluster, but doesn’t work – at least not without OpenStack.&lt;/p&gt;
+&lt;p&gt;( This post is currently in progress; there will be clean-up later. )&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;~/personal
+➔ mkdir phusion-jekyll; cd phusion-jekyll
+
+~/personal/phusion-jekyll
+➔ git clone https://github.com/phusion/baseimage-docker.git
+Cloning into &amp;#39;baseimage-docker&amp;#39;...
+remote: Counting objects: 1193, done.
+remote: Total 1193 (delta 0), reused 0 (delta 0), pack-reused 1193
+Receiving objects: 100% (1193/1193), 1.48 MiB | 1.57 MiB/s, done.
+Resolving deltas: 100% (699/699), done.
+Checking connectivity... done.
+
+~/personal/phusion-jekyll
+➔ cd baseimage-docker
+
+personal/phusion-jekyll/baseimage-docker on master
+➔ ls
+CONTRIBUTING.md Makefile README_zh_tw.md install-tools.sh
+Changelog.md README.md Vagrantfile test
+LICENSE.txt README_ZH_cn_.md image tools
+
+personal/phusion-jekyll/baseimage-docker on master
+➔ vagrant up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Warning: The next line causes vagrant to allow running VM instance to access the files on your local machine. Know what you’re doing when you give any VM or container access to your local machine.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For the sake of convenience, I want a folder in the VM to directly reference my work folder (future github) folder, so I add this line:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;config.vm.synced_folder &quot;data&quot;, &quot;/home/vagrant/data&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;➔ tail -6 Vagrantfile
+    config.vm.provision :shell, :inline =&amp;gt; $script
+  end
+
+  config.vm.synced_folder &amp;quot;data&amp;quot;, &amp;quot;/home/vagrant/data&amp;quot;
+
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then I create the data folder and restart the vagrant box:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;personal/phusion-jekyll/baseimage-docker on master [!]
+➔ mkdir data; vagrant halt; vagrant up
+
+==&amp;gt; default: Attempting graceful shutdown of VM...
+
+Bringing machine &amp;#39;default&amp;#39; up with &amp;#39;virtualbox&amp;#39; provider...
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;My new folder is at the top of this list:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;==&amp;gt; default: Mounting shared folders...
+default: /home/vagrant/data =&amp;gt; /Users/jno/personal/phusion-jekyll/baseimage-docker/data
+default: /vagrant/baseimage-docker =&amp;gt; /Users/jno/personal/phusion-jekyll/baseimage-docker
+default: /vagrant =&amp;gt; /Users/jno/personal/phusion-jekyll/baseimage-docker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, I run the following in the vagrant session, to build the initial files:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cd data
+docker run \
+  --interactive \
+  --label=jekyll \
+  --publish 4000:4000 \
+  --rm \ 
+  --tty \
+  --volume=$(pwd):/srv/jekyll 
+  jekyll/jekyll:pages jekyll new . --force&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The volume specification above is similar to the shared folder mount earlier, except for containers. At this time, this is considered more dangerous, by some. In this case, it’s pretty safe, as it only allows the docker container direct access to a path in the VM, and not your localhost.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I was going to include a screenshot here of what it should look like when the above command is run, but I spent the time making the &lt;a href=&quot;/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Shortcut&quot;&gt;short cut&lt;/a&gt; instead.&lt;/p&gt;
+
+&lt;p&gt;.. and create this file (phusion-jekyll/baseimage-docker/exec-jekyll.sh), to run the jekyll container:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-docker&quot; data-lang=&quot;docker&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /home/vagrant/data
+docker stop jekyll_runtime 2&amp;gt; /dev/null
+docker rm -v jekyll_runtime 2&amp;gt; /dev/null
+docker run &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    --env &lt;span class=&quot;nv&quot;&gt;FORCE_POLLING&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    --env &lt;span class=&quot;nv&quot;&gt;JEKYLL_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;development &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    --env &lt;span class=&quot;nv&quot;&gt;VERBOSE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    --label&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;jekyll &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    --name&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;jekyll_runtime &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    --publish &lt;span class=&quot;s2&quot;&gt;&amp;quot;0.0.0.0:4000:80&amp;quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    --rm &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    --volume&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$(pwd):/srv/jekyll&amp;quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    jekyll/jekyll:pages jekyll build --watch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;… and make the file executable:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;➔ chmod +x exec-jekyll.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To make the webserver in the container accessible, and to execute my new script, I add these lines to the Vagrantfile that I edited before:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;...
+
+  config.vm.synced_folder &amp;quot;data&amp;quot;, &amp;quot;/home/vagrant/data&amp;quot;
+  config.vm.network :forwarded_port, guest: 4000, host: 4000
+  config.vm.provision &amp;quot;shell&amp;quot;, path: &amp;quot;exec-jekyll.sh&amp;quot;
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;vagrant provision&lt;/code&gt; runs the script:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;personal/phusion-jekyll/baseimage-docker on master [!]
+➔ vagrant provision
+==&amp;gt; default: Running provisioner: shell...
+        default: Running: /var/folders/9s/320v29913qs9j6kzxnqv7smclw01rh/T/vagrant-shell201
+60302-97040-1s32frt.sh
+==&amp;gt; default: stdin: is not a tty
+==&amp;gt; default: jekyll_runtime
+==&amp;gt; default: Github does not allow user dependencies.
+==&amp;gt; default: Configuration file: /srv/jekyll/_config.yml
+==&amp;gt; default: Source: /srv/jekyll
+==&amp;gt; default: Destination: /srv/jekyll/_site
+==&amp;gt; default: Generating...
+==&amp;gt; default: done.
+==&amp;gt; default: Auto-regeneration: enabled for &amp;#39;/srv/jekyll&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, I can browse to: http://localhost:4000, and click on the “Welcome to Jekyll” link.&lt;/p&gt;
+
+&lt;p&gt;This link was generated from data/_posts/[date]-welcome-to-jekyll.markdown&lt;/p&gt;
+
+&lt;p&gt;I switch to another terminal and edit the file locally:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Welcome&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll!&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;...&lt;/span&gt; 
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;jekyll update&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;You’ll find this post in your `_posts` directory. ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I change the above to:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Welcome&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll!&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;...&lt;/span&gt; 
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;jekyll update&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;You’ll find this SAMPLE post in your `_posts` directory. ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and when I save the file, I see activity in the previous terminal session:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;...
+==&amp;gt; default: done.
+==&amp;gt; default: Auto-regeneration: enabled for &amp;#39;/srv/jekyll&amp;#39;
+==&amp;gt; default: Regenerating: 1 file(s) changed at 2016-03-02 23:47:21&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, when I refresh the localhost:4000, it’s updated!&lt;/p&gt;
+
+&lt;p&gt;When I’m finished updating my site, I take the vagrant box down:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;==&amp;gt; default:       Regenerating: 1 file(s) changed at 2016-03-03 15:00:13
+==&amp;gt; default: ...done in 0.860794742 seconds.
+^C==&amp;gt; default: Waiting for cleanup before exiting...
+^C==&amp;gt; default: Exiting immediately, without cleanup!
+
+personal/phusion-jekyll/baseimage-docker on master [!?]
+➔ vagrant halt
+==&amp;gt; default: Attempting graceful shutdown of VM...
+
+personal/phusion-jekyll/baseimage-docker on master [!?]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s the process. Be sure to check out my shortcut for a handy script that does all the work for you!&lt;/p&gt;
+
+&lt;p&gt;I actually do a little more work to get the switchable theme in my static website. This work amounts to mangling the generated files with the use of a bash and a python script.&lt;/p&gt;
+
+&lt;p&gt;For the next blog in this series, I’ll post how to easily work github pages into this, and then my steps to create a new blog entry, after all the setup is done.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 03 Mar 2016 07:01:00 +0000</pubDate>
-        <link>http://cognitiaclaeves.github.io/light/blog/Holy-Atomic-Operating-Systems-Batman</link>
-        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/blog/Holy-Atomic-Operating-Systems-Batman</guid>
+        <pubDate>Thu, 03 Mar 2016 08:08:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Github</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/blog/Blogging-with-Vagrant-Docker-Jekyll-Github</guid>
+        
+        <category>blogging-w-vdjg</category>
+        
+        <category>vagrant</category>
         
         <category>docker</category>
         
-        <category>atomichost</category>
+        <category>github</category>
         
-        <category>kubernetes</category>
+        <category>jekyll</category>
+        
+        <category>blogging</category>
         
         
         <category>light</category>
@@ -745,7 +813,7 @@ personal/phusion-jekyll/baseimage-docker on master [!?]&lt;/code&gt;&lt;/pre&gt;
         
         <category>docker</category>
         
-        <category>atomichost</category>
+        <category>atomic host</category>
         
         <category>kubernetes</category>
         
@@ -755,154 +823,30 @@ personal/phusion-jekyll/baseimage-docker on master [!?]&lt;/code&gt;&lt;/pre&gt;
       </item>
     
       <item>
-        <title>The Next Blog</title>
-        <description>&lt;h2 id=&quot;goodbye-wordpress&quot;&gt;Goodbye Wordpress&lt;/h2&gt;
+        <title>Holy Atomic Operating Systems, Batman!</title>
+        <description>&lt;p&gt;This one is going to be short. My company has a weekly ‘Docker Roundup’ that the ‘Misfits of Docker’ participate in. We use an hour each week to explore what all of us are working on that’s related to containers and container orchestration.&lt;/p&gt;
 
-&lt;p&gt;I lost my desire to blog with Wordpress the first time I watched it mangle my spacing, and then enforce whatever it was doing by not taking changes … until my efforts to make it  accept my deisred whitespace wiped out the entire post. I remember feeling particularly angry that I had found a bug report mentioning this … that was … … years … old. Or maybe it was when I was messing around with themes, and I did something in the theme that caused the entire site not to load. Or maybe it was the day that I realized that all the posts are stored in a database, so there’s no easy way to backup. And restoring a Wordpress site? By the time I considered that nightmare, I was determined to avoid that level of hell by avoiding blogging altogether.&lt;/p&gt;
+&lt;p&gt;Additionally, we’ve recently started having a ‘theme’ for the meeting, a task to accomplish related to containers or container orchestration.&lt;/p&gt;
 
-&lt;p&gt;It was beginning to feel a lot like Microsoft tech: big, bloated interfaces that save your data in secret places that are a nightmare to back up. … crashes, wasted time … wasted hours, days, ( which I projected would later be followed by weeks and months ).&lt;/p&gt;
+&lt;p&gt;For the last one, I requested that we cover Atomic Hosts. We followed &lt;a href=&quot;http://www.projectatomic.io/docs/gettingstarted/&quot;&gt;this guide&lt;/a&gt; – I should point out that we followed the directions almost exactly, even though some strings had changed, with the exception of the 192.* IP addresses.  We replicated the steps on an AWS cluster.&lt;/p&gt;
 
-&lt;p&gt;And I was supposed to maintain a spririt of creativity throught that? Shaking my fists at inanimate computer screens ( which aren’t even part of the problem ) – is not my idea of time well spent.&lt;/p&gt;
+&lt;p&gt;It was a bit odd to instantiate a pod directly in kubernetes ( rather than a replication controller ), so we moved onto another guide that included an expose command, and that’s about where our success ended: Amazon and Kubernetes don’t know each other well enough for Amazon to respond to the expose command.&lt;/p&gt;
 
-&lt;p&gt;My experience with Wordpress wasn’t all bad. It gave me standards for a blogging platform:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;I wanted to be able to edit files off-line&lt;/li&gt;
-  &lt;li&gt;I wanted the posts to be as effortless to maintain as possible&lt;/li&gt;
-  &lt;li&gt;I didn’t want everything in a database&lt;/li&gt;
-  &lt;li&gt;As a matter of fact, maybe not a dynamic site, at all&lt;/li&gt;
-  &lt;li&gt;I wanted the data backed up to the cloud somewhere&lt;/li&gt;
-  &lt;li&gt;I wanted solid revision control&lt;/li&gt;
-  &lt;li&gt;I wanted the site to be easily restorable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you’ve ever worked with Wordpress, you might notice that the list above is sort of the antithesis of Wordpress.&lt;/p&gt;
-
-&lt;p&gt;And while I wanted convenience, I still wanted the end result to be more customizable ( and less expensive! ) than those website-in-a-box kind of places.&lt;/p&gt;
-
-&lt;p&gt;And then I happened to see a demo where someone had married static site generation ( with Jekyll ) with devops style cleverness. ( I talk about how this site is set up &lt;a href=&quot;http://localhost:4000/tags/light/blogging-w-vdjg&quot;&gt;here&lt;/a&gt;. )&lt;/p&gt;
-
-&lt;p&gt;I just knew this was my ticket to a blogging platform that would be a better fit for me.&lt;/p&gt;
-
-&lt;p&gt;And it just so happened that this solution came with free revision control (backups) AND free hosting? I hadn’t even dared put on my list of standards that I didn’t want to manage a web hosting account for the site. I didn’t dream I’d find such a thing.&lt;/p&gt;
-
-&lt;h2 id=&quot;hello-chaos&quot;&gt;Hello Chaos&lt;/h2&gt;
-
-&lt;p&gt;So, I took the time to duplicate what I saw in the demo, and suddenly found myself confronted with a new, empty page; with chaos. Where the page was once taken up by “helpful” fluff of all kinds, now it was like the page was staring back at me.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Well, what are you going to do now?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It was a feeling similar to the feeling I had when I finally succeeded in switching to Linux: I had been used to hand-holding, and suddenly confronted with so much more potential than my hand-holding-conditioned mind could fathom. All of the layers that I had once been comfortably unaware of now held key clues that I needed to understand to use my system efficiently.&lt;/p&gt;
-
-&lt;p&gt;What did I want?&lt;/p&gt;
-
-&lt;p&gt;My mind boggled at the sheer potential. If I could do anything, what would I do?&lt;/p&gt;
-
-&lt;p&gt;I wanted my blog to be friendly to human beings and different devices.  It seemed like Jekyll themes already considered mobile devices and computer screens, out of the box, but friendly to people? How could I ( who am not a web developer ) make such a thing? How would I make it human-friendly?&lt;/p&gt;
-
-&lt;p&gt;That was when I remembered my favorite theme: Solarized – which has light and dark choices, both designed to be easy on the eyes. And that was when I realized, that if Jekyll builds static pages in files saved locally to my hard drive, then I could tap into my scripting aptitude to mangle the static files after the build, and create the effect of a dynamic ( theme-switchable ) site with all of the advantages of a static one.&lt;/p&gt;
-
-&lt;p&gt;So, apparently, when confronted with chaos, I can build something that I would have never conceived of without staring down the void.&lt;/p&gt;
+&lt;p&gt;Other than that, though, the experience went pretty well: We were able to get a modern kubernetes cluster working that could create a single pod ( or replicated pods ) in under an hour. This was, by far, the fastest way to get a kubernetes cluster working on the cloud. Everything else that we’ve tried - CentOS guides and coreOS guides - have resulted in more work than an hour’s worth. Recently I found one in Kubernetes/Contrib that uses Vagrant to set up the entire cluster, but doesn’t work – at least not without OpenStack.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 17 Jan 2016 06:20:00 +0000</pubDate>
-        <link>http://cognitiaclaeves.github.io/light/blog/The-Next-Blog</link>
-        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/blog/The-Next-Blog</guid>
+        <pubDate>Thu, 03 Mar 2016 07:01:00 +0000</pubDate>
+        <link>http://cognitiaclaeves.github.io/light/blog/Holy-Atomic-Operating-Systems-Batman</link>
+        <guid isPermaLink="true">http://cognitiaclaeves.github.io/light/blog/Holy-Atomic-Operating-Systems-Batman</guid>
         
-        <category>blogging</category>
+        <category>docker</category>
         
-        <category>blog design</category>
+        <category>atomic host</category>
         
-        <category>wordpress</category>
-        
-        <category>jekyll</category>
-        
-        <category>lifestyle</category>
-        
-        <category>linux</category>
-        
-        <category>oversharing</category>
+        <category>kubernetes</category>
         
         
         <category>light</category>
-        
-      </item>
-    
-      <item>
-        <title>The Next Blog</title>
-        <description>&lt;h2 id=&quot;goodbye-wordpress&quot;&gt;Goodbye Wordpress&lt;/h2&gt;
-
-&lt;p&gt;I lost my desire to blog with Wordpress the first time I watched it mangle my spacing, and then enforce whatever it was doing by not taking changes … until my efforts to make it  accept my deisred whitespace wiped out the entire post. I remember feeling particularly angry that I had found a bug report mentioning this … that was … … years … old. Or maybe it was when I was messing around with themes, and I did something in the theme that caused the entire site not to load. Or maybe it was the day that I realized that all the posts are stored in a database, so there’s no easy way to backup. And restoring a Wordpress site? By the time I considered that nightmare, I was determined to avoid that level of hell by avoiding blogging altogether.&lt;/p&gt;
-
-&lt;p&gt;It was beginning to feel a lot like Microsoft tech: big, bloated interfaces that save your data in secret places that are a nightmare to back up. … crashes, wasted time … wasted hours, days, ( which I projected would later be followed by weeks and months ).&lt;/p&gt;
-
-&lt;p&gt;And I was supposed to maintain a spririt of creativity throught that? Shaking my fists at inanimate computer screens ( which aren’t even part of the problem ) – is not my idea of time well spent.&lt;/p&gt;
-
-&lt;p&gt;My experience with Wordpress wasn’t all bad. It gave me standards for a blogging platform:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;I wanted to be able to edit files off-line&lt;/li&gt;
-  &lt;li&gt;I wanted the posts to be as effortless to maintain as possible&lt;/li&gt;
-  &lt;li&gt;I didn’t want everything in a database&lt;/li&gt;
-  &lt;li&gt;As a matter of fact, maybe not a dynamic site, at all&lt;/li&gt;
-  &lt;li&gt;I wanted the data backed up to the cloud somewhere&lt;/li&gt;
-  &lt;li&gt;I wanted solid revision control&lt;/li&gt;
-  &lt;li&gt;I wanted the site to be easily restorable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you’ve ever worked with Wordpress, you might notice that the list above is sort of the antithesis of Wordpress.&lt;/p&gt;
-
-&lt;p&gt;And while I wanted convenience, I still wanted the end result to be more customizable ( and less expensive! ) than those website-in-a-box kind of places.&lt;/p&gt;
-
-&lt;p&gt;And then I happened to see a demo where someone had married static site generation ( with Jekyll ) with devops style cleverness. ( I talk about how this site is set up &lt;a href=&quot;http://localhost:4000/tags/dark/blogging-w-vdjg&quot;&gt;here&lt;/a&gt;. )&lt;/p&gt;
-
-&lt;p&gt;I just knew this was my ticket to a blogging platform that would be a better fit for me.&lt;/p&gt;
-
-&lt;p&gt;And it just so happened that this solution came with free revision control (backups) AND free hosting? I hadn’t even dared put on my list of standards that I didn’t want to manage a web hosting account for the site. I didn’t dream I’d find such a thing.&lt;/p&gt;
-
-&lt;h2 id=&quot;hello-chaos&quot;&gt;Hello Chaos&lt;/h2&gt;
-
-&lt;p&gt;So, I took the time to duplicate what I saw in the demo, and suddenly found myself confronted with a new, empty page; with chaos. Where the page was once taken up by “helpful” fluff of all kinds, now it was like the page was staring back at me.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Well, what are you going to do now?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It was a feeling similar to the feeling I had when I finally succeeded in switching to Linux: I had been used to hand-holding, and suddenly confronted with so much more potential than my hand-holding-conditioned mind could fathom. All of the layers that I had once been comfortably unaware of now held key clues that I needed to understand to use my system efficiently.&lt;/p&gt;
-
-&lt;p&gt;What did I want?&lt;/p&gt;
-
-&lt;p&gt;My mind boggled at the sheer potential. If I could do anything, what would I do?&lt;/p&gt;
-
-&lt;p&gt;I wanted my blog to be friendly to human beings and different devices.  It seemed like Jekyll themes already considered mobile devices and computer screens, out of the box, but friendly to people? How could I ( who am not a web developer ) make such a thing? How would I make it human-friendly?&lt;/p&gt;
-
-&lt;p&gt;That was when I remembered my favorite theme: Solarized – which has light and dark choices, both designed to be easy on the eyes. And that was when I realized, that if Jekyll builds static pages in files saved locally to my hard drive, then I could tap into my scripting aptitude to mangle the static files after the build, and create the effect of a dynamic ( theme-switchable ) site with all of the advantages of a static one.&lt;/p&gt;
-
-&lt;p&gt;So, apparently, when confronted with chaos, I can build something that I would have never conceived of without staring down the void.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 17 Jan 2016 06:20:00 +0000</pubDate>
-        <link>http://cognitiaclaeves.github.io/dark/blog/The-Next-Blog</link>
-        <guid isPermaLink="true">http://cognitiaclaeves.github.io/dark/blog/The-Next-Blog</guid>
-        
-        <category>blogging</category>
-        
-        <category>blog design</category>
-        
-        <category>wordpress</category>
-        
-        <category>jekyll</category>
-        
-        <category>lifestyle</category>
-        
-        <category>linux</category>
-        
-        <category>oversharing</category>
-        
-        
-        <category>dark</category>
         
       </item>
     
