@@ -52,6 +52,52 @@
     <div id="content">
       
   
+
+  
+	<article class="post">
+
+		
+			<h1><a href="/light/blog/Holy-Atomic-Operating-Systems-Batman">Holy Atomic Operating Systems, Batman!</a></h1>
+		
+
+		
+<div class="archive_meta_wrapper">
+	<time datetime="2016-03-03">March  3, 2016</time>
+	<ul class="tag_list">
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/docker">docker</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/atomic host">atomic host</a>
+	    </li>
+	  
+	    <li class="tag_list_item">
+	      <a class="tag_list_link" href="/tags/light/kubernetes">kubernetes</a>
+	    </li>
+	  
+	</ul>
+</div>
+
+
+		<div class="post-content"><p>This one is going to be short. My company has a weekly ‘Docker Roundup’ that the ‘Misfits of Docker’ participate in. We use an hour each week to explore what all of us are working on that’s related to containers and container orchestration.</p>
+
+<p>Additionally, we’ve recently started having a ‘theme’ for the meeting, a task to accomplish related to containers or container orchestration.</p>
+
+<p>For the last one, I requested that we cover Atomic Hosts. We followed <a href="http://www.projectatomic.io/docs/gettingstarted/">this guide</a> – I should point out that we followed the directions almost exactly, even though some strings had changed, with the exception of the 192.* IP addresses.  We replicated the steps on an AWS cluster.</p>
+
+<p>It was a bit odd to instantiate a pod directly in kubernetes ( rather than a replication controller ), so we moved onto another guide that included an expose command, and that’s about where our success ended: Amazon and Kubernetes don’t know each other well enough for Amazon to respond to the expose command.</p>
+
+<p>Other than that, though, the experience went pretty well: We were able to get a modern kubernetes cluster working that could create a single pod ( or replicated pods ) in under an hour. This was, by far, the fastest way to get a kubernetes cluster working on the cloud. Everything else that we’ve tried - CentOS guides and coreOS guides - have resulted in more work than an hour’s worth. Recently I found one in Kubernetes/Contrib that uses Vagrant to set up the entire cluster, but doesn’t work – at least not without OpenStack.</p>
+
+</div>
+
+	</article>
+
+  
+
+  
 	<article class="post">
 
 		
